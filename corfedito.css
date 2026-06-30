@@ -1,0 +1,54 @@
+/* ===== CONTENEDOR DEL ROBOT ===== */
+
+.robot-app{
+    background:linear-gradient(#0d1b2a,#1b263b);
+    width:100%;
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+
+    font-family:Arial;
+}
+
+.robot-app .contenedor{
+    text-align:center;
+}
+
+.robot-app #robot{
+    animation:flotar 3s ease-in-out infinite;
+    transition:1s;
+    cursor:pointer;
+}
+
+.robot-app #robot img{
+    width:330px;
+    transition:0.5s;
+}
+
+.robot-app #robot:hover img{
+    transform:scale(1.05);
+}
+
+.robot-app #mensaje{
+    margin-top:25px;
+    font-size:25px;
+    color:white;
+    font-weight:bold;
+}
+
+@keyframes flotar{
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-20px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}

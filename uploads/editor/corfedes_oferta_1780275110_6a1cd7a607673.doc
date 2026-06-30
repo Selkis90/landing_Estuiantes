@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Corfedes - Oferta Educativa</title>
+<style>
+    body, table, td { margin:0; padding:0; border-collapse:collapse; }
+    img { border:0; display:block; max-width:100%; height:auto; }
+    .texto-enriquecido { font-family: Arial, Helvetica, sans-serif; }
+    .texto-enriquecido strong { font-weight: bold; }
+    .texto-enriquecido em { font-style: italic; }
+    .texto-enriquecido u { text-decoration: underline; }
+    .texto-enriquecido s { text-decoration: line-through; }
+</style>
+</head>
+<body style="margin:0; padding:0; background-color:#e9ecef; font-family:Arial,Helvetica,sans-serif;">
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="background-color:#e9ecef;">
+        <tr>
+            <td align="center" style="padding:20px 10px;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:500px; width:100%; margin:0 auto;"><tr>
+                        <td style="background:#ffffff; border-radius:12px; padding:12px 18px; margin-bottom:12px; box-shadow:0 1px 2px rgba(0,0,0,0.05);">
+                            <div style=" padding:10px 15px; border-radius:10px; text-align:center;" class="texto-enriquecido">
+                            <strong>hola</strong><br>
+                            <em>como estas</em><br>
+                            <u>este es el primer texto</u>
+                        </div>
+                        </td>
+                    </tr><tr>
+                        <td style="background:#ffffff; border-radius:12px; padding:12px 18px; margin-top:12px; box-shadow:0 1px 2px rgba(0,0,0,0.05);">
+                            <div style=" padding:10px 15px; border-radius:10px; text-align:left;" class="texto-enriquecido">
+                            <strong>HOLA</strong><br>
+                            <span style="color: #e67e22;">ESTE ES EL</span><br>
+                            <u>SEGUNDO TEXTO</u>
+                        </div>
+                        </td>
+                    </tr></tr>
+            </table>
+         </table>
+     </table>
+</body>
+</html>
