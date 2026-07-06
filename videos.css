@@ -1,0 +1,253 @@
+/* ============================================
+   ESTILOS EXCLUSIVOS PARA SECCIÓN DE VIDEOS
+   ============================================ */
+
+/* RESET dentro de la sección */
+.mi-seccion-videos * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+/* Afecta SOLO al body dentro de la sección (si lo necesitas) */
+.mi-seccion-videos body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #eef2fb;
+  padding: 40px;
+  
+}
+
+/* CONTENEDOR PRINCIPAL */
+.mi-seccion-videos .videos60 {
+  max-width: 1300px;
+  margin-right: 28%;
+  background: linear-gradient(135deg, #071021, #08142d, #081a36);
+  border-radius: 28px;
+  padding: 28px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+/* ENCABEZADO */
+.mi-seccion-videos .videos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.mi-seccion-videos .videos-title {
+  color: #fff;
+  font-size: 38px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mi-seccion-videos .videos-title span {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.mi-seccion-videos .ver-todos {
+  color: #2da8ff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.mi-seccion-videos .ver-todos:hover {
+  color: white;
+}
+
+/* CONTENEDOR TARJETAS */
+.mi-seccion-videos .videos-container {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+}
+
+.mi-seccion-videos .videos-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* TARJETA VIDEO */
+.mi-seccion-videos .video-card {
+  position: relative;
+  width: 110px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 10px;
+  flex-shrink: 0;
+  text-decoration: none;
+  transition: 0.4s;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #101820;
+}
+
+.mi-seccion-videos .video-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+/* OVERLAY */
+.mi-seccion-videos .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0.25),
+    rgba(0, 0, 0, 0.05)
+  );
+}
+
+/* BOTON PLAY */
+.mi-seccion-videos .play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(15px);
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.35s;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+.mi-seccion-videos .play svg {
+  width: 28px;
+  height: 28px;
+  transition: 0.3s;
+}
+
+/* TEXTO */
+.mi-seccion-videos .video-info {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 0px;
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.9);
+  z-index: 10;
+}
+
+/* HOVER */
+.mi-seccion-videos .video-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+}
+
+.mi-seccion-videos .video-card:hover img {
+  transform: scale(1.08);
+}
+
+.mi-seccion-videos .video-card:hover .play {
+  background: white;
+}
+
+.mi-seccion-videos .video-card:hover svg {
+  fill: #111;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .mi-seccion-videos .videos60 {
+    padding: 18px;
+  }
+
+  .mi-seccion-videos .video-card {
+    min-width: 180px;
+    height: 260px;
+  }
+
+  .mi-seccion-videos .video-info {
+    font-size: 18px;
+  }
+
+  .mi-seccion-videos .play {
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+  }
+}
+
+/* CONTENEDOR DEL SLIDER */
+.mi-seccion-videos .videos-slider {
+  position: relative;
+}
+
+/* BOTONES LATERALES */
+.mi-seccion-videos .slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: 0.3s;
+  z-index: 20;
+}
+
+.mi-seccion-videos .slider-btn:hover {
+  background: white;
+  color: #111;
+}
+
+.mi-seccion-videos .prev {
+  left: -18px;
+}
+
+.mi-seccion-videos .next {
+  right: -18px;
+}
+
+/* CURSOR PARA ARRASTRAR */
+.mi-seccion-videos .videos-container {
+  cursor: grab;
+}
+
+.mi-seccion-videos .videos-container:active {
+  cursor: grabbing;
+}
+
+.mi-seccion-videos .video-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    130deg,
+    transparent 10%,
+    rgba(255, 255, 255, 0.1) 45%,
+    transparent 75%
+  );
+  transform: translateX(-130%);
+  transition: 0.8s;
+  z-index: 5;
+}
+
+.mi-seccion-videos .video-card:hover::before {
+  transform: translateX(130%);
+}

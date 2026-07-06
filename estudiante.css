@@ -609,7 +609,7 @@ body {
 
 .future-item {
   background: #eef4fa;
-  padding: 0.6rem 0.3rem;
+  padding: 0.6rem 1.3rem;
   text-align: center;
   border-radius: 40px;
   font-weight: 500;
@@ -1056,4 +1056,8 @@ body {
 
 .logo_corfedes{
   width: 100px;
+}
+
+.future-item img{
+    width:22px;
 }

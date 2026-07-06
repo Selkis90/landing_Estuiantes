@@ -1,3 +1,6 @@
+<?php
+require 'video.php';
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -6,9 +9,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CORFEDES CAV · Descubre tu talento</title>
   <link rel="stylesheet" href="estudiante.css?v=10" />
+  <link rel="stylesheet" href="videos.css">
   <link rel="stylesheet" href="corfedito.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
 </head>
 
 <body>
@@ -183,13 +188,34 @@
         <a href="#" class="link-all">Ver todas <i class="fas fa-arrow-right"></i></a>
       </div>
       <div class="future-grid">
-        <div class="future-item"><i class="fas fa-database"></i> Líder de Datos</div>
-        <div class="future-item"><i class="fas fa-shield-alt"></i> Ciberseguridad</div>
-        <div class="future-item"><i class="fas fa-chart-line"></i> Marketing Digital</div>
-        <div class="future-item"><i class="fas fa-code"></i> Desarrollo Web</div>
-        <div class="future-item"><i class="fas fa-coins"></i> Finanzas Líquidas</div>
-        <div class="future-item"><i class="fas fa-handshake"></i> Relaciones</div>
-        <div class="future-item"><i class="fas fa-paint-brush"></i> Diseño UX/UI</div>
+        <div class="future-item">
+          <img src="/img/cerebro.png" alt="Líder de Datos" class="future-icon">
+          <span>IA y Dates</span>
+        </div>
+        <div class="future-item">
+          <img src="/img/candado.png" alt="Ciberseguridad" class="future-icon">
+          <span>Ciber-seguridad</span>
+        </div>
+        <div class="future-item">
+          <img src="/img/megafono.png" alt="Marketing Digital" class="future-icon">
+          <span>Marketing Digital</span>
+        </div>
+        <div class="future-item">
+          <img src="/img/programacion.png" alt="Desarrollo Web" class="future-icon">
+          <span>Desarrollo Web</span>
+        </div>
+        <div class="future-item">
+          <img src="/img/finanzas.png" alt="Finanzas Líquidas" class="future-icon">
+          <span>Energias limpias</span>
+        </div>
+        <div class="future-item">
+          <img src="/img/robot.png" alt="Relaciones" class="future-icon">
+          <span>Robótica</span>
+        </div>
+        <div class="future-item">
+          <img src="/img/diseño.png" alt="Relaciones" class="future-icon">
+          <span>Diseño UX/UI</span>
+        </div>
       </div>
     </section>
 
@@ -197,37 +223,42 @@
     <!-- VIDEOS EN 60 SEGUNDOS -->
     <!-- ========================================= -->
     <section class="videos-section">
-      <div class="section-header">
-        <h3>Videos en 60 segundos</h3>
-        <a href="#" class="link-all">Ver todas <i class="fas fa-arrow-right"></i></a>
-      </div>
-      <div class="videos-grid">
-        <div class="video-card">
-          <div class="video-thumb"><i class="fas fa-play-circle"></i></div>
-          <p>¿Qué haces con Positivo?</p>
+      <div class="mi-seccion-videos">
+        <div class="videos-header">
+          <div class="videos-title">
+            🔥 <span>Videos en 60 segundos</span>
+          </div>
+          <a href="#" class="ver-todos">
+            Ver todas →
+          </a>
         </div>
-        <div class="video-card">
-          <div class="video-thumb"><i class="fas fa-play-circle"></i></div>
-          <p>Día de un Ingeniero</p>
-        </div>
-        <div class="video-card">
-          <div class="video-thumb"><i class="fas fa-play-circle"></i></div>
-          <p>Día de la apasionada Medellín</p>
-        </div>
-        <div class="video-card">
-          <div class="video-thumb"><i class="fas fa-play-circle"></i></div>
-          <p>¿Quieres un Dineinatur?</p>
-        </div>
-        <div class="video-card">
-          <div class="video-thumb"><i class="fas fa-play-circle"></i></div>
-          <p>Imprescindible / Por dónde empezar?</p>
+
+        <div class="videos-slider">
+          <button class="slider-btn prev">&#10094;</button>
+          <div class="videos-container" id="slider">
+            <?php foreach ($videos as $video): ?>
+              <a href="<?= $video['url']; ?>" class="video-card">
+                <img src="<?= $video['imagen']; ?>" alt="<?= $video['titulo']; ?>">
+                <div class="overlay"></div>
+                <div class="play">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+                <div class="video-info">
+                  <?= $video['titulo']; ?>
+                </div>
+              </a>
+            <?php endforeach; ?>
+          </div>
+          <button class="slider-btn next">&#10095;</button>
         </div>
       </div>
 
       <!-- ========================================= -->
       <!-- CORFEDITO -->
       <!-- ========================================= -->
-      <div class="contenedor">
+      <!-- <div class="contenedor">
 
         <div id="robot">
 
@@ -241,10 +272,8 @@
 
         </div>
 
-      </div>
+      </div> -->
     </section>
-
-
 
     <!-- ========================================= -->
     <!-- COMUNIDAD (No estás solo) -->
@@ -346,7 +375,7 @@
   <script src="estudiante.js"></script>
   <script src="corfedito.js"></script>
   <?php include 'estudiante-backend.php'; ?>
-
+  <script src="/videos.js"></script>
 
 </body>
 
