@@ -49,11 +49,12 @@ require 'video.php';
     <section class="hero">
       <div class="hero-badge">BIENVENIDO ESTUDIANTE</div>
 
-      <h2>Descubre tu talento, construye tu futuro</h2>
+      <h2>Descubre tu talento,</h2>
+      <h2>construye tu futuro</h2>
       <p class="hero-sub">
-        Te acompañamos a elegir tu camino profesional de forma fácil,
-        <span class="highlight">divertida e inteligente</span>.
-      </p>
+        Te acompañamos a elegir tu camino profesional </p>
+      <p class="hero-sub">de forma fácil, divertida e inteligente.</p>
+
       <div class="hero-actions">
         <button class="btn primary" id="startTestBtn">
           <i class="fas fa-rocket"></i> Comenzar mi test
@@ -252,7 +253,9 @@ require 'video.php';
             <?php endforeach; ?>
           </div>
           <button class="slider-btn next">&#10095;</button>
+
         </div>
+
       </div>
 
       <!-- ========================================= -->
@@ -279,44 +282,57 @@ require 'video.php';
     <!-- COMUNIDAD (No estás solo) -->
     <!-- ========================================= -->
     <section class="community-section">
+      <!-- Columna izquierda -->
       <div class="community-content">
         <h3>No estás solo en este camino</h3>
-        <p>Unete a nuestra comunidad y comparte tus dudas</p>
-        <button class="btn primary"><i class="fas fa-users"></i> Unirme a la comunidad</button>
+        <p>Únete a nuestra comunidad y comparte tus dudas</p>
+
+        <!-- <button class="btn primary">
+          <i class="fas fa-users"></i>
+          Unirme a la comunidad
+        </button> -->
+      </div>
+
+      <!-- Columna centro -->
+      <div class="stats-section">
+
+        <div class="stat-item">
+          <i class="fas fa-user-graduate"></i>
+          <span class="stat-number">15.000+</span>
+          <span class="stat-label">Estudiantes</span>
+        </div>
+
+        <div class="stat-item">
+          <i class="fas fa-graduation-cap"></i>
+          <span class="stat-number">500+</span>
+          <span class="stat-label">Carreras</span>
+        </div>
+
+        <div class="stat-item">
+          <i class="fas fa-chalkboard-teacher"></i>
+          <span class="stat-number">120+</span>
+          <span class="stat-label">Conferencias</span>
+        </div>
+
+        <div class="stat-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span class="stat-number">25</span>
+          <span class="stat-label">Ciudades</span>
+        </div>
+
+      </div>
+
+      <!-- Columna derecha -->
+      <div class="cta-section">
+        <i class="fas fa-calendar-alt"></i>
+
+        <div>
+          <h3>Agenda tu orientación</h3>
+          <p>Con un profesional</p>
+        </div>
+        <i class="fas fa-arrow-right"></i>
       </div>
     </section>
-
-    <!-- ========================================= -->
-    <!-- ESTADÍSTICAS -->
-    <!-- ========================================= -->
-    <section class="stats-section">
-      <div class="stat-item">
-        <span class="stat-number">15.000+</span>
-        <span class="stat-label">Estudiantes</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number">500+</span>
-        <span class="stat-label">Carreras</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number">120+</span>
-        <span class="stat-label">Conferencias</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number">25+</span>
-        <span class="stat-label">Gulos</span>
-      </div>
-    </section>
-
-    <!-- ========================================= -->
-    <!-- AGENDA TU ORIENTACIÓN -->
-    <!-- ========================================= -->
-    <section class="cta-section">
-      <h3>Agenda tu orientación</h3>
-      <p>Con un profesional</p>
-      <button class="btn primary"><i class="fas fa-calendar-check"></i> Agendar cita</button>
-    </section>
-
     <!-- ========================================= -->
     <!-- FOOTER (4 columnas) -->
     <!-- ========================================= -->
@@ -360,12 +376,7 @@ require 'video.php';
       </div>
     </footer>
 
-    <!-- ========================================= -->
-    <!-- FOOTER BOTTOM -->
-    <!-- ========================================= -->
-    <div class="footer-bottom">
-      <p>Tu futuro emplea hoy</p>
-    </div>
+
 
   </div>
 

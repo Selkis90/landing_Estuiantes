@@ -4,10 +4,10 @@
 
 /* RESET dentro de la sección */
 .mi-seccion-videos * {
-  margin: 0;
+  margin: -6px;
   padding: 0;
   box-sizing: border-box;
-  
+  border-radius: 10px;
 }
 
 /* Afecta SOLO al body dentro de la sección (si lo necesitas) */
@@ -15,7 +15,6 @@
   font-family: Arial, Helvetica, sans-serif;
   background: #eef2fb;
   padding: 40px;
-  
 }
 
 /* CONTENEDOR PRINCIPAL */
@@ -139,7 +138,7 @@
   position: absolute;
   left: 20px;
   right: 20px;
-  bottom: 0px;
+  bottom: 20px;
   color: white;
   font-size: 10px;
   font-weight: 700;
