@@ -235,47 +235,108 @@ require 'video.php';
         </div>
 
         <div class="videos-slider">
-          <button class="slider-btn prev">&#10094;</button>
+          <button class="slider-btn prev">❮</button>
           <div class="videos-container" id="slider">
-            <?php foreach ($videos as $video): ?>
-              <a href="<?= $video['url']; ?>" class="video-card">
-                <img src="<?= $video['imagen']; ?>" alt="<?= $video['titulo']; ?>">
-                <div class="overlay"></div>
-                <div class="play">
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
-                <div class="video-info">
-                  <?= $video['titulo']; ?>
-                </div>
-              </a>
-            <?php endforeach; ?>
+            <a href="#" class="video-card">
+              <img src="/img_video/Psychology.png" alt="¿Qué hace un Psicólogo?">
+              <div class="overlay"></div>
+              <div class="play">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                  <path d="M8 5v14l11-7z"></path>
+                </svg>
+              </div>
+              <div class="video-info">
+                ¿Qué hace un Psicólogo?
+              </div>
+            </a>
+            <a href="#" class="video-card">
+              <img src="img_video/ingenieria.png" alt="Día de un Ingeniero">
+              <div class="overlay"></div>
+              <div class="play">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                  <path d="M8 5v14l11-7z"></path>
+                </svg>
+              </div>
+              <div class="video-info">
+                Día de un Ingeniero
+              </div>
+            </a>
+            <a href="#" class="video-card">
+              <img src="img_video/medicina.png" alt="Así te enamorarás de Medicina">
+              <div class="overlay"></div>
+              <div class="play">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                  <path d="M8 5v14l11-7z"></path>
+                </svg>
+              </div>
+              <div class="video-info">
+                Así te enamorarás de Medicina
+              </div>
+            </a>
+            <a href="https://youtu.be/TyMq_7hqN14" class="video-card">
+              <img src="img_video/diseñador.png" alt="¿Quieres ser Diseñador?">
+              <div class="overlay"></div>
+              <div class="play">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                  <path d="M8 5v14l11-7z"></path>
+                </svg>
+              </div>
+              <div class="video-info">
+                ¿Quieres ser Diseñador?
+              </div>
+            </a>
+            <a href="#" class="video-card">
+              <img src="img_video/abogado.png" alt="Quieres ser abogado">
+              <div class="overlay"></div>
+              <div class="play">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                  <path d="M8 5v14l11-7z"></path>
+                </svg>
+              </div>
+              <div class="video-info">
+                Quieres ser abogado
+              </div>
+            </a>
+            <a href="#" class="video-card">
+              <img src="img_video/abogado.png" alt="Quieres ser abogado">
+              <div class="overlay"></div>
+              <div class="play">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                  <path d="M8 5v14l11-7z"></path>
+                </svg>
+              </div>
+              <div class="video-info">
+                Quieres ser abogado
+              </div>
+            </a>
+            <a href="#" class="video-card">
+              <img src="img_video/abogado.png" alt="Quieres ser abogado">
+              <div class="overlay"></div>
+              <div class="play">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                  <path d="M8 5v14l11-7z"></path>
+                </svg>
+              </div>
+              <div class="video-info">
+                Quieres ser abogado
+              </div>
+            </a>
+            <a href="#" class="video-card">
+              <img src="img_video/abogado.png" alt="Quieres ser abogado">
+              <div class="overlay"></div>
+              <div class="play">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                  <path d="M8 5v14l11-7z"></path>
+                </svg>
+              </div>
+              <div class="video-info">
+                Quieres ser abogado
+              </div>
+            </a>
           </div>
-          <button class="slider-btn next">&#10095;</button>
-
+          <button class="slider-btn next">❯</button>
         </div>
-
       </div>
-
-      <!-- ========================================= -->
-      <!-- CORFEDITO -->
-      <!-- ========================================= -->
-      <!-- <div class="contenedor">
-
-        <div id="robot">
-
-          <img src="/img/corfedito.png" id="imgRobot">
-
-        </div>
-
-        <div id="mensaje">
-
-          Hola Humano
-
-        </div>
-
-      </div> -->
     </section>
 
     <!-- ========================================= -->
