@@ -62,7 +62,24 @@ require 'video.php';
         <button class="btn outline" id="exploreCareersBtn">
           <i class="fas fa-compass"></i> Explorar carreras
         </button>
-        <span class="counter">+15,000 estudiantes ya han anunciado su concurso</span>
+
+      </div>
+      <!-- Agrega esto dentro de tu .app-wrapper, por ejemplo después de la sección de videos -->
+      <div class="students-wrapper">
+        <div class="students-container">
+          <div class="students">
+            <div class="avatars">
+              <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Estudiante">
+              <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Estudiante">
+              <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Estudiante">
+              <img src="https://randomuser.me/api/portraits/men/77.jpg" alt="Estudiante">
+            </div>
+            <div class="info">
+              <h3>+15.000 estudiantes</h3>
+              <p>ya han avanzado su copingo 🚀</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
