@@ -169,29 +169,71 @@ require 'video.php';
         <div class="card">
           <div class="header">
             <span class="trophy">🏆</span>
-            <h3>Tu progreso</h3>
+            <h3>Test de Fortalezas</h3>
           </div>
 
-          <div class="content">
-            <div class="progress">
-              <div class="progress-content">
-                <div class="percent">60%</div>
-                <div class="label">Test ocasional</div>
+          <!-- Estado: antes de empezar -->
+          <div id="testIntro">
+            <div class="content">
+              <div class="progress">
+                <div class="progress-content">
+                  <div class="percent">0%</div>
+                  <div class="label">Sin empezar</div>
+                </div>
               </div>
+              <ul class="steps">
+                <li><span class="pending"></span> ¿Quién eres?</li>
+                <li><span class="pending"></span> Tus intereses</li>
+                <li><span class="pending"></span> Tus habilidades</li>
+                <li><span class="pending"></span> Tus metas</li>
+                <li><span class="pending"></span> Tu estilo</li>
+              </ul>
             </div>
-
-            <ul class="steps">
-              <li><span class="check">✓</span> ¿Quién eres?</li>
-              <li><span class="check">✓</span> Tus intereses</li>
-              <li><span class="check">✓</span> Tus habilidades</li>
-              <li><span class="pending"></span> Explora carreras</li>
-              <li><span class="pending"></span> Tu plan de futuro</li>
-            </ul>
+            <div class="steps-counter">
+              <span>0</span> de 5 pasos completados
+            </div>
+            <div class="button" onclick="startTest()">
+              Comenzar test
+              <span class="arrow">➜</span>
+            </div>
           </div>
 
-          <div class="button">
-            Continuar test
-            <span class="arrow">➜</span>
+          <!-- Estado: test en curso (oculto inicialmente) -->
+          <div id="testContainer" style="display: none;">
+            <div id="questionCounter" style="color: #8899bb; font-size: 13px; margin-bottom: 12px;">
+              Pregunta <span id="currentQ">1</span> de <span id="totalQ">5</span>
+            </div>
+            <div id="progressBar" style="width: 100%; height: 4px; background: rgba(255,255,255,0.1); border-radius: 4px; margin-bottom: 20px; overflow: hidden;">
+              <div id="progressFill" style="width: 20%; height: 100%; background: linear-gradient(90deg, #d01818, #ff6b6b); border-radius: 4px; transition: width 0.5s ease;"></div>
+            </div>
+            <div id="questionText" style="font-size: 18px; font-weight: 600; color: #fff; margin-bottom: 20px; min-height: 60px;">
+              ¿Cómo te describirías a ti mismo?
+            </div>
+            <div id="optionsContainer" style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px;">
+              <!-- Opciones generadas por JS -->
+            </div>
+            <div style="display: flex; justify-content: space-between; gap: 10px;">
+              <button class="button" onclick="prevQuestion()" id="prevBtn" style="flex: 1; background: rgba(255,255,255,0.1); box-shadow: none; height: 40px; font-size: 13px;">
+                ← Anterior
+              </button>
+              <button class="button" onclick="nextQuestion()" id="nextBtn" style="flex: 2; height: 40px; font-size: 13px;">
+                Siguiente →
+              </button>
+            </div>
+          </div>
+
+          <!-- Estado: resultados (oculto inicialmente) -->
+          <div id="resultContainer" style="display: none; text-align: center;">
+            <div style="font-size: 48px; margin-bottom: 10px;">🎉</div>
+            <h3 style="color: #fff; font-size: 22px; margin-bottom: 8px;">¡Test completado!</h3>
+            <p style="color: #8899bb; font-size: 14px; margin-bottom: 16px;">Estas son tus principales fortalezas:</p>
+            <div id="resultCards" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px;">
+              <!-- Generado por JS -->
+            </div>
+            <div class="button" onclick="resetTest()" style="background: linear-gradient(135deg, #18d46a, #0fa84f); box-shadow: 0 8px 25px rgba(24, 212, 106, 0.35);">
+              Rehacer test
+              <span class="arrow">⟳</span>
+            </div>
           </div>
         </div>
       </div>
@@ -479,6 +521,7 @@ require 'video.php';
   <script src="corfedito.js"></script>
   <?php include 'estudiante-backend.php'; ?>
   <script src="/videos.js"></script>
+  <script src="/test.js"></script>
 
 </body>
 
