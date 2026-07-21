@@ -226,52 +226,99 @@ require 'video.php';
         <div class="videos-slider">
           <button class="slider-btn prev">❮</button>
           <div class="videos-container" id="slider">
+            <!-- Video 1 -->
             <div class="video-card" data-video="qeqn1d9rplk">
               <img src="img_video/Psychology.png" alt="¿Qué hace un Psicólogo?">
               <div class="overlay"></div>
-              <div class="play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"></path></svg></div>
+              <div class="play">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                  <path d="M8 5v14l11-7z"></path>
+                </svg>
+              </div>
               <div class="video-info">¿Qué hace un Psicólogo?</div>
             </div>
+
+            <!-- Video 2 -->
             <div class="video-card" data-video="LmqScjXfTH8">
               <img src="img_video/ingenieria.png" alt="Día de un Ingeniero">
               <div class="overlay"></div>
-              <div class="play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"></path></svg></div>
+              <div class="play">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                  <path d="M8 5v14l11-7z"></path>
+                </svg>
+              </div>
               <div class="video-info">Día de un Ingeniero</div>
             </div>
+
+            <!-- Video 3 -->
             <div class="video-card" data-video="TyMq_7hqN14">
               <img src="img_video/medicina.png" alt="Así te enamorarás de Medicina">
               <div class="overlay"></div>
-              <div class="play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"></path></svg></div>
+              <div class="play">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                  <path d="M8 5v14l11-7z"></path>
+                </svg>
+              </div>
               <div class="video-info">Así te enamorarás de Medicina</div>
             </div>
+
+            <!-- Video 4 -->
             <div class="video-card" data-video="TyMq_7hqN14">
               <img src="img_video/diseñador.png" alt="¿Quieres ser Diseñador?">
               <div class="overlay"></div>
-              <div class="play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"></path></svg></div>
+              <div class="play">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                  <path d="M8 5v14l11-7z"></path>
+                </svg>
+              </div>
               <div class="video-info">¿Quieres ser Diseñador?</div>
             </div>
+
+            <!-- Video 5 -->
             <div class="video-card" data-video="TyMq_7hqN14">
               <img src="img_video/abogado.png" alt="Quieres ser abogado">
               <div class="overlay"></div>
-              <div class="play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"></path></svg></div>
+              <div class="play">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                  <path d="M8 5v14l11-7z"></path>
+                </svg>
+              </div>
               <div class="video-info">Quieres ser abogado</div>
             </div>
+
+            <!-- Video 6 -->
             <div class="video-card" data-video="TyMq_7hqN14">
               <img src="img_video/abogado.png" alt="Quieres ser abogado">
               <div class="overlay"></div>
-              <div class="play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"></path></svg></div>
+              <div class="play">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                  <path d="M8 5v14l11-7z"></path>
+                </svg>
+              </div>
               <div class="video-info">Quieres ser abogado</div>
             </div>
+
+            <!-- Video 7 -->
             <div class="video-card" data-video="qeqn1d9rplk">
               <img src="img_video/Psychology.png" alt="¿Qué hace un Psicólogo?">
               <div class="overlay"></div>
-              <div class="play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"></path></svg></div>
+              <div class="play">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                  <path d="M8 5v14l11-7z"></path>
+                </svg>
+              </div>
               <div class="video-info">¿Qué hace un Psicólogo?</div>
             </div>
+
+            <!-- Video 8 -->
             <div class="video-card" data-video="TyMq_7hqN14">
               <img src="img_video/abogado.png" alt="Quieres ser abogado">
               <div class="overlay"></div>
-              <div class="play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"></path></svg></div>
+              <div class="play">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                  <path d="M8 5v14l11-7z"></path>
+                </svg>
+              </div>
               <div class="video-info">Quieres ser abogado</div>
             </div>
           </div>
@@ -419,6 +466,68 @@ require 'video.php';
               <i class="fas fa-times"></i> Cerrar
             </button>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================= -->
+    <!-- MODAL PARA AGENDAR ORIENTACIÓN            -->
+    <!-- ========================================= -->
+    <div id="agendarModal" class="career-modal">
+      <div class="career-modal-content" style="max-width: 500px;">
+        <div class="career-modal-header">
+          <div>
+            <span class="career-modal-icon">📅</span>
+            <h2 id="agendarModalTitle">Agenda tu orientación</h2>
+          </div>
+          <button class="career-modal-close" onclick="closeAgendarModal()">✕</button>
+        </div>
+        <div class="career-modal-body">
+          <form id="formAgendar" onsubmit="enviarAgendamiento(event)">
+            <div class="career-modal-info full-width" style="margin-bottom: 16px;">
+              <h4>👤 Tus datos</h4>
+              <input type="text" id="nombreAgendar" placeholder="Tu nombre completo" required style="width:100%; padding:12px 16px; border-radius:10px; border:1px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.05); color:#fff; font-size:14px; margin-top:8px;">
+              <input type="email" id="emailAgendar" placeholder="Tu correo electrónico" required style="width:100%; padding:12px 16px; border-radius:10px; border:1px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.05); color:#fff; font-size:14px; margin-top:8px;">
+              <input type="tel" id="telefonoAgendar" placeholder="Tu número de teléfono" required style="width:100%; padding:12px 16px; border-radius:10px; border:1px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.05); color:#fff; font-size:14px; margin-top:8px;">
+            </div>
+
+            <div class="career-modal-info full-width" style="margin-bottom: 16px;">
+              <h4>📋 ¿Qué necesitas?</h4>
+              <select id="tipoOrientacion" required style="width:100%; padding:12px 16px; border-radius:10px; border:1px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.05); color:#fff; font-size:14px; margin-top:8px;">
+                <option value="" style="background:#0a1e3a;">Selecciona una opción</option>
+                <option value="test" style="background:#0a1e3a;">📝 Orientación vocacional</option>
+                <option value="carrera" style="background:#0a1e3a;">🎓 Información de carrera</option>
+                <option value="universidad" style="background:#0a1e3a;">🏛️ Universidades</option>
+                <option value="general" style="background:#0a1e3a;">💬 Consulta general</option>
+              </select>
+            </div>
+
+            <div class="career-modal-info full-width" style="margin-bottom: 16px;">
+              <h4>📅 Fecha y hora</h4>
+              <input type="date" id="fechaAgendar" required style="width:100%; padding:12px 16px; border-radius:10px; border:1px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.05); color:#fff; font-size:14px; margin-top:8px;">
+              <input type="time" id="horaAgendar" required style="width:100%; padding:12px 16px; border-radius:10px; border:1px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.05); color:#fff; font-size:14px; margin-top:8px;">
+            </div>
+
+            <div class="career-modal-info full-width" style="margin-bottom: 16px;">
+              <h4>📝 Mensaje adicional</h4>
+              <textarea id="mensajeAgendar" rows="3" placeholder="Cuéntanos más sobre lo que necesitas..." style="width:100%; padding:12px 16px; border-radius:10px; border:1px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.05); color:#fff; font-size:14px; margin-top:8px; resize:vertical; font-family:inherit;"></textarea>
+            </div>
+
+            <div class="career-modal-actions" style="margin-top:0;">
+              <button type="submit" class="btn primary" style="flex:1; background: linear-gradient(135deg, #d01818, #a01010); box-shadow: 0 8px 25px rgba(208,24,24,0.35);">
+                <i class="fas fa-paper-plane"></i> Enviar solicitud
+              </button>
+              <button type="button" class="btn secondary" onclick="closeAgendarModal()" style="flex:0.5;">
+                Cancelar
+              </button>
+            </div>
+
+            <div id="mensajeExito" style="display:none; text-align:center; padding:20px; background:rgba(24,212,106,0.1); border-radius:12px; border:1px solid rgba(24,212,106,0.2); margin-top:16px;">
+              <div style="font-size:40px; margin-bottom:8px;">✅</div>
+              <h4 style="color:#18d46a; margin-bottom:4px;">¡Solicitud enviada!</h4>
+              <p style="color:#8899bb; font-size:14px;">Un profesional se comunicará contigo pronto.</p>
+            </div>
+          </form>
         </div>
       </div>
     </div>
