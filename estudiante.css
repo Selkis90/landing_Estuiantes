@@ -1418,3 +1418,124 @@ body {
     font-size: 12px;
   }
 }
+
+/* =============================================
+   REPRODUCTOR FLOTANTE DE VIDEOS
+   ============================================= */
+
+/* Fondo oscuro del modal */
+.video-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInModal 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+@keyframes fadeInModal {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Contenedor del modal */
+.video-modal-content {
+  background: #0a1e30;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 560px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
+  animation: slideUpModal 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+@keyframes slideUpModal {
+  0% { 
+    transform: translateY(30px) scale(0.95); 
+    opacity: 0; 
+  }
+  100% { 
+    transform: translateY(0) scale(1); 
+    opacity: 1; 
+  }
+}
+
+/* Header del modal */
+.video-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  background: #0d2438;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.video-modal-title {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 15px;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.video-modal-close {
+  background: none;
+  border: none;
+  color: #8899bb;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 0 8px;
+  transition: all 0.3s ease;
+  line-height: 1;
+}
+
+.video-modal-close:hover {
+  color: #ffffff;
+  transform: rotate(90deg);
+}
+
+/* Cuerpo del modal (iframe) */
+.video-modal-body {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  background: #000;
+}
+
+.video-modal-body iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Responsive del reproductor */
+@media (max-width: 600px) {
+  .video-modal-content {
+    width: 95%;
+    border-radius: 12px;
+  }
+  
+  .video-modal-header {
+    padding: 10px 16px;
+  }
+  
+  .video-modal-title {
+    font-size: 13px;
+  }
+  
+  .video-modal-close {
+    font-size: 18px;
+  }
+}

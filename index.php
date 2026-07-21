@@ -296,19 +296,20 @@ require 'video.php';
         <div class="videos-slider">
           <button class="slider-btn prev">❮</button>
           <div class="videos-container" id="slider">
-            <a href="#" class="video-card">
-              <img src="/img_video/Psychology.png" alt="¿Qué hace un Psicólogo?">
+            <!-- Video 1 - YouTube -->
+            <div class="video-card" data-video="https://youtu.be/qeqn1d9rplk">
+              <img src="img_video/Psychology.png" alt="¿Qué hace un Psicólogo?">
               <div class="overlay"></div>
               <div class="play">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
                   <path d="M8 5v14l11-7z"></path>
                 </svg>
               </div>
-              <div class="video-info">
-                ¿Qué hace un Psicólogo?
-              </div>
-            </a>
-            <a href="#" class="video-card">
+              <div class="video-info">¿Qué hace un Psicólogo?</div>
+            </div>
+
+            <!-- Video 2 - YouTube -->
+            <div class="video-card" data-video="https://youtu.be/LmqScjXfTH8">
               <img src="img_video/ingenieria.png" alt="Día de un Ingeniero">
               <div class="overlay"></div>
               <div class="play">
@@ -316,11 +317,11 @@ require 'video.php';
                   <path d="M8 5v14l11-7z"></path>
                 </svg>
               </div>
-              <div class="video-info">
-                Día de un Ingeniero
-              </div>
-            </a>
-            <a href="#" class="video-card">
+              <div class="video-info">Día de un Ingeniero</div>
+            </div>
+
+            <!-- Video 3 - YouTube -->
+            <div class="video-card" data-video="https://www.youtube.com/embed/TyMq_7hqN14?autoplay=1">
               <img src="img_video/medicina.png" alt="Así te enamorarás de Medicina">
               <div class="overlay"></div>
               <div class="play">
@@ -328,11 +329,11 @@ require 'video.php';
                   <path d="M8 5v14l11-7z"></path>
                 </svg>
               </div>
-              <div class="video-info">
-                Así te enamorarás de Medicina
-              </div>
-            </a>
-            <a href="https://youtu.be/TyMq_7hqN14" class="video-card">
+              <div class="video-info">Así te enamorarás de Medicina</div>
+            </div>
+
+            <!-- Video 4 - YouTube -->
+            <div class="video-card" data-video="https://www.youtube.com/embed/TyMq_7hqN14?autoplay=1">
               <img src="img_video/diseñador.png" alt="¿Quieres ser Diseñador?">
               <div class="overlay"></div>
               <div class="play">
@@ -340,11 +341,11 @@ require 'video.php';
                   <path d="M8 5v14l11-7z"></path>
                 </svg>
               </div>
-              <div class="video-info">
-                ¿Quieres ser Diseñador?
-              </div>
-            </a>
-            <a href="#" class="video-card">
+              <div class="video-info">¿Quieres ser Diseñador?</div>
+            </div>
+
+            <!-- Video 5 - YouTube -->
+            <div class="video-card" data-video="https://www.youtube.com/embed/TyMq_7hqN14?autoplay=1">
               <img src="img_video/abogado.png" alt="Quieres ser abogado">
               <div class="overlay"></div>
               <div class="play">
@@ -352,11 +353,11 @@ require 'video.php';
                   <path d="M8 5v14l11-7z"></path>
                 </svg>
               </div>
-              <div class="video-info">
-                Quieres ser abogado
-              </div>
-            </a>
-            <a href="#" class="video-card">
+              <div class="video-info">Quieres ser abogado</div>
+            </div>
+
+            <!-- Video 6 - YouTube -->
+            <div class="video-card" data-video="https://www.youtube.com/embed/TyMq_7hqN14?autoplay=1">
               <img src="img_video/abogado.png" alt="Quieres ser abogado">
               <div class="overlay"></div>
               <div class="play">
@@ -364,11 +365,23 @@ require 'video.php';
                   <path d="M8 5v14l11-7z"></path>
                 </svg>
               </div>
-              <div class="video-info">
-                Quieres ser abogado
+              <div class="video-info">Quieres ser abogado</div>
+            </div>
+
+            <!-- Video 7 - YouTube -->
+            <div class="video-card" data-video="qeqn1d9rplk">
+              <img src="img_video/Psychology.png" alt="¿Qué hace un Psicólogo?">
+              <div class="overlay"></div>
+              <div class="play">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                  <path d="M8 5v14l11-7z"></path>
+                </svg>
               </div>
-            </a>
-            <a href="#" class="video-card">
+              <div class="video-info">¿Qué hace un Psicólogo?</div>
+            </div>
+
+            <!-- Video 8 - YouTube -->
+            <div class="video-card" data-video="https://www.youtube.com/embed/TyMq_7hqN14?autoplay=1">
               <img src="img_video/abogado.png" alt="Quieres ser abogado">
               <div class="overlay"></div>
               <div class="play">
@@ -376,27 +389,29 @@ require 'video.php';
                   <path d="M8 5v14l11-7z"></path>
                 </svg>
               </div>
-              <div class="video-info">
-                Quieres ser abogado
-              </div>
-            </a>
-            <a href="#" class="video-card">
-              <img src="img_video/abogado.png" alt="Quieres ser abogado">
-              <div class="overlay"></div>
-              <div class="play">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-                  <path d="M8 5v14l11-7z"></path>
-                </svg>
-              </div>
-              <div class="video-info">
-                Quieres ser abogado
-              </div>
-            </a>
+              <div class="video-info">Quieres ser abogado</div>
+            </div>
           </div>
           <button class="slider-btn next">❯</button>
         </div>
       </div>
+
+      <!-- ============================================= -->
+      <!-- REPRODUCTOR FLOTANTE (aparece al hacer clic)  -->
+      <!-- ============================================= -->
+      <div id="videoModal" class="video-modal">
+        <div class="video-modal-content">
+          <div class="video-modal-header">
+            <span id="videoTitle" class="video-modal-title">Título del video</span>
+            <button class="video-modal-close" onclick="closeVideo()">✕</button>
+          </div>
+          <div class="video-modal-body">
+            <iframe id="videoIframe" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
     </section>
+    <section>corfedito</section>
 
     <!-- ========================================= -->
     <!-- COMUNIDAD (No estás solo) -->
