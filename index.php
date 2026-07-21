@@ -12,8 +12,7 @@ require 'video.php';
   <link rel="stylesheet" href="videos.css">
   <link rel="stylesheet" href="corfedito.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 </head>
 
 <body>
@@ -48,13 +47,10 @@ require 'video.php';
     <!-- ========================================= -->
     <section class="hero">
       <div class="hero-badge">BIENVENIDO ESTUDIANTE</div>
-
       <h2>Descubre tu talento,</h2>
       <h2>construye tu futuro</h2>
-      <p class="hero-sub">
-        Te acompañamos a elegir tu camino profesional </p>
+      <p class="hero-sub">Te acompañamos a elegir tu camino profesional</p>
       <p class="hero-sub">de forma fácil, divertida e inteligente.</p>
-
       <div class="hero-actions">
         <button class="btn primary" id="startTestBtn">
           <i class="fas fa-rocket"></i> Comenzar mi test
@@ -62,9 +58,7 @@ require 'video.php';
         <button class="btn outline" id="exploreCareersBtn">
           <i class="fas fa-compass"></i> Explorar carreras
         </button>
-
       </div>
-      <!-- Agrega esto dentro de tu .app-wrapper, por ejemplo después de la sección de videos -->
       <div class="students-wrapper">
         <div class="students-container">
           <div class="students">
@@ -88,47 +82,36 @@ require 'video.php';
     <!-- ========================================= -->
     <section class="quick-explore">
       <div class="quick-card">
-        <span class="icon-circle blue">
-          <i class="fas fa-compass"></i>
-        </span>
+        <span class="icon-circle blue"><i class="fas fa-compass"></i></span>
         <h3>Test</h3>
         <p>Descubre tus fertilizantes</p>
       </div>
       <div class="quick-card">
-        <span class="icon-circle green">
-          <i class="fas fa-graduation-cap"></i>
-        </span>
+        <span class="icon-circle green"><i class="fas fa-graduation-cap"></i></span>
         <h3>Explora</h3>
         <p>Más de 500 carreras</p>
       </div>
       <div class="quick-card">
-        <span class="icon-circle red">
-          <i class="fas fa-video"></i>
-        </span>
+        <span class="icon-circle red"><i class="fas fa-video"></i></span>
         <h3>Videos</h3>
         <p>En 60 segundos</p>
       </div>
       <div class="quick-card">
-        <span class="icon-circle purple">
-          <i class="fas fa-comments"></i>
-        </span>
+        <span class="icon-circle purple"><i class="fas fa-comments"></i></span>
         <h3>Comunidad</h3>
         <p>Pregunte y comparte</p>
       </div>
       <div class="quick-card">
-        <span class="icon-circle orange">
-          <i class="fas fa-calendar-alt"></i>
-        </span>
+        <span class="icon-circle orange"><i class="fas fa-calendar-alt"></i></span>
         <h3>Eventos</h3>
         <p>Conferencias y talleres</p>
       </div>
     </section>
 
     <!-- ========================================= -->
-    <!-- CARRERAS + PROGRESO (ESTILO SEGUNDA IMAGEN) -->
+    <!-- CARRERAS + PROGRESO -->
     <!-- ========================================= -->
     <section class="main-grid">
-      <!-- Columna izquierda: carreras -->
       <div class="career-section">
         <div class="section-header">
           <h3>Explorar carreras que te pueden gustar</h3>
@@ -143,13 +126,10 @@ require 'video.php';
           </div>
           <div class="career-match-card">
             <img src="/img/sistemas.png" alt="sistemas" class="img_explora">
-            <div class="text_explora">
-              <div class="career-title">Ing. de Sistemas</div>
-              <div class="career-area">Tecnología</div>
-              <span class="career-match">92% Match</span>
-            </div>
+            <div class="career-title">Ing. de Sistemas</div>
+            <div class="career-area">Tecnología</div>
+            <span class="career-match">92% Match</span>
           </div>
-
           <div class="career-match-card">
             <img src="/img/comunicacion.png" alt="comunicacion" class="img_explora">
             <div class="career-title">Comunicación</div>
@@ -164,15 +144,13 @@ require 'video.php';
           </div>
         </div>
       </div>
-      <!-- Columna derecha: progreso -->
+
       <div class="profile-progress">
         <div class="card">
           <div class="header">
             <span class="trophy">🏆</span>
             <h3>Test de Fortalezas</h3>
           </div>
-
-          <!-- Estado: antes de empezar -->
           <div id="testIntro">
             <div class="content">
               <div class="progress">
@@ -189,16 +167,9 @@ require 'video.php';
                 <li><span class="pending"></span> Tu estilo</li>
               </ul>
             </div>
-            <div class="steps-counter">
-              <span>0</span> de 5 pasos completados
-            </div>
-            <div class="button" onclick="startTest()">
-              Comenzar test
-              <span class="arrow">➜</span>
-            </div>
+            <div class="steps-counter"><span>0</span> de 5 pasos completados</div>
+            <div class="button" onclick="startTest()">Comenzar test <span class="arrow">➜</span></div>
           </div>
-
-          <!-- Estado: test en curso (oculto inicialmente) -->
           <div id="testContainer" style="display: none;">
             <div id="questionCounter" style="color: #8899bb; font-size: 13px; margin-bottom: 12px;">
               Pregunta <span id="currentQ">1</span> de <span id="totalQ">5</span>
@@ -206,41 +177,26 @@ require 'video.php';
             <div id="progressBar" style="width: 100%; height: 4px; background: rgba(255,255,255,0.1); border-radius: 4px; margin-bottom: 20px; overflow: hidden;">
               <div id="progressFill" style="width: 20%; height: 100%; background: linear-gradient(90deg, #d01818, #ff6b6b); border-radius: 4px; transition: width 0.5s ease;"></div>
             </div>
-            <div id="questionText" style="font-size: 18px; font-weight: 600; color: #fff; margin-bottom: 20px; min-height: 60px;">
-              ¿Cómo te describirías a ti mismo?
-            </div>
-            <div id="optionsContainer" style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px;">
-              <!-- Opciones generadas por JS -->
-            </div>
+            <div id="questionText" style="font-size: 18px; font-weight: 600; color: #fff; margin-bottom: 20px; min-height: 60px;">¿Cómo te describirías a ti mismo?</div>
+            <div id="optionsContainer" style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px;"></div>
             <div style="display: flex; justify-content: space-between; gap: 10px;">
-              <button class="button" onclick="prevQuestion()" id="prevBtn" style="flex: 1; background: rgba(255,255,255,0.1); box-shadow: none; height: 40px; font-size: 13px;">
-                ← Anterior
-              </button>
-              <button class="button" onclick="nextQuestion()" id="nextBtn" style="flex: 2; height: 40px; font-size: 13px;">
-                Siguiente →
-              </button>
+              <button class="button" onclick="prevQuestion()" id="prevBtn" style="flex: 1; background: rgba(255,255,255,0.1); box-shadow: none; height: 40px; font-size: 13px;">← Anterior</button>
+              <button class="button" onclick="nextQuestion()" id="nextBtn" style="flex: 2; height: 40px; font-size: 13px;">Siguiente →</button>
             </div>
           </div>
-
-          <!-- Estado: resultados (oculto inicialmente) -->
           <div id="resultContainer" style="display: none; text-align: center;">
             <div style="font-size: 48px; margin-bottom: 10px;">🎉</div>
             <h3 style="color: #fff; font-size: 22px; margin-bottom: 8px;">¡Test completado!</h3>
             <p style="color: #8899bb; font-size: 14px; margin-bottom: 16px;">Estas son tus principales fortalezas:</p>
-            <div id="resultCards" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px;">
-              <!-- Generado por JS -->
-            </div>
-            <div class="button" onclick="resetTest()" style="background: linear-gradient(135deg, #18d46a, #0fa84f); box-shadow: 0 8px 25px rgba(24, 212, 106, 0.35);">
-              Rehacer test
-              <span class="arrow">⟳</span>
-            </div>
+            <div id="resultCards" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px;"></div>
+            <div class="button" onclick="resetTest()" style="background: linear-gradient(135deg, #18d46a, #0fa84f); box-shadow: 0 8px 25px rgba(24, 212, 106, 0.35);">Rehacer test <span class="arrow">⟳</span></div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ========================================= -->
-    <!-- PROFESIONES DEL FUTURO (7 áreas) -->
+    <!-- PROFESIONES DEL FUTURO -->
     <!-- ========================================= -->
     <section class="future-section">
       <div class="section-header">
@@ -248,34 +204,13 @@ require 'video.php';
         <a href="#" class="link-all">Ver todas <i class="fas fa-arrow-right"></i></a>
       </div>
       <div class="future-grid">
-        <div class="future-item">
-          <img src="/img/cerebro.png" alt="Líder de Datos" class="future-icon">
-          <span>IA y Dates</span>
-        </div>
-        <div class="future-item">
-          <img src="/img/candado.png" alt="Ciberseguridad" class="future-icon">
-          <span>Ciber-seguridad</span>
-        </div>
-        <div class="future-item">
-          <img src="/img/megafono.png" alt="Marketing Digital" class="future-icon">
-          <span>Marketing Digital</span>
-        </div>
-        <div class="future-item">
-          <img src="/img/programacion.png" alt="Desarrollo Web" class="future-icon">
-          <span>Desarrollo Web</span>
-        </div>
-        <div class="future-item">
-          <img src="/img/finanzas.png" alt="Finanzas Líquidas" class="future-icon">
-          <span>Energias limpias</span>
-        </div>
-        <div class="future-item">
-          <img src="/img/robot.png" alt="Relaciones" class="future-icon">
-          <span>Robótica</span>
-        </div>
-        <div class="future-item">
-          <img src="/img/diseño.png" alt="Relaciones" class="future-icon">
-          <span>Diseño UX/UI</span>
-        </div>
+        <div class="future-item"><img src="/img/cerebro.png" alt="IA" class="future-icon"><span>IA y Dates</span></div>
+        <div class="future-item"><img src="/img/candado.png" alt="Ciberseguridad" class="future-icon"><span>Ciber-seguridad</span></div>
+        <div class="future-item"><img src="/img/megafono.png" alt="Marketing" class="future-icon"><span>Marketing Digital</span></div>
+        <div class="future-item"><img src="/img/programacion.png" alt="Desarrollo" class="future-icon"><span>Desarrollo Web</span></div>
+        <div class="future-item"><img src="/img/finanzas.png" alt="Energías" class="future-icon"><span>Energias limpias</span></div>
+        <div class="future-item"><img src="/img/robot.png" alt="Robótica" class="future-icon"><span>Robótica</span></div>
+        <div class="future-item"><img src="/img/diseño.png" alt="Diseño" class="future-icon"><span>Diseño UX/UI</span></div>
       </div>
     </section>
 
@@ -285,110 +220,58 @@ require 'video.php';
     <section class="videos-section">
       <div class="mi-seccion-videos">
         <div class="videos-header">
-          <div class="videos-title">
-            🔥 <span>Videos en 60 segundos</span>
-          </div>
-          <a href="#" class="ver-todos">
-            Ver todas →
-          </a>
+          <div class="videos-title">🔥 <span>Videos en 60 segundos</span></div>
+          <a href="#" class="ver-todos">Ver todas →</a>
         </div>
-
         <div class="videos-slider">
           <button class="slider-btn prev">❮</button>
           <div class="videos-container" id="slider">
-            <!-- Video 1 - YouTube -->
-            <div class="video-card" data-video="https://youtu.be/qeqn1d9rplk">
-              <img src="img_video/Psychology.png" alt="¿Qué hace un Psicólogo?">
-              <div class="overlay"></div>
-              <div class="play">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-                  <path d="M8 5v14l11-7z"></path>
-                </svg>
-              </div>
-              <div class="video-info">¿Qué hace un Psicólogo?</div>
-            </div>
-
-            <!-- Video 2 - YouTube -->
-            <div class="video-card" data-video="https://youtu.be/LmqScjXfTH8">
-              <img src="img_video/ingenieria.png" alt="Día de un Ingeniero">
-              <div class="overlay"></div>
-              <div class="play">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-                  <path d="M8 5v14l11-7z"></path>
-                </svg>
-              </div>
-              <div class="video-info">Día de un Ingeniero</div>
-            </div>
-
-            <!-- Video 3 - YouTube -->
-            <div class="video-card" data-video="https://www.youtube.com/embed/TyMq_7hqN14?autoplay=1">
-              <img src="img_video/medicina.png" alt="Así te enamorarás de Medicina">
-              <div class="overlay"></div>
-              <div class="play">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-                  <path d="M8 5v14l11-7z"></path>
-                </svg>
-              </div>
-              <div class="video-info">Así te enamorarás de Medicina</div>
-            </div>
-
-            <!-- Video 4 - YouTube -->
-            <div class="video-card" data-video="https://www.youtube.com/embed/TyMq_7hqN14?autoplay=1">
-              <img src="img_video/diseñador.png" alt="¿Quieres ser Diseñador?">
-              <div class="overlay"></div>
-              <div class="play">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-                  <path d="M8 5v14l11-7z"></path>
-                </svg>
-              </div>
-              <div class="video-info">¿Quieres ser Diseñador?</div>
-            </div>
-
-            <!-- Video 5 - YouTube -->
-            <div class="video-card" data-video="https://www.youtube.com/embed/TyMq_7hqN14?autoplay=1">
-              <img src="img_video/abogado.png" alt="Quieres ser abogado">
-              <div class="overlay"></div>
-              <div class="play">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-                  <path d="M8 5v14l11-7z"></path>
-                </svg>
-              </div>
-              <div class="video-info">Quieres ser abogado</div>
-            </div>
-
-            <!-- Video 6 - YouTube -->
-            <div class="video-card" data-video="https://www.youtube.com/embed/TyMq_7hqN14?autoplay=1">
-              <img src="img_video/abogado.png" alt="Quieres ser abogado">
-              <div class="overlay"></div>
-              <div class="play">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-                  <path d="M8 5v14l11-7z"></path>
-                </svg>
-              </div>
-              <div class="video-info">Quieres ser abogado</div>
-            </div>
-
-            <!-- Video 7 - YouTube -->
             <div class="video-card" data-video="qeqn1d9rplk">
               <img src="img_video/Psychology.png" alt="¿Qué hace un Psicólogo?">
               <div class="overlay"></div>
-              <div class="play">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-                  <path d="M8 5v14l11-7z"></path>
-                </svg>
-              </div>
+              <div class="play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"></path></svg></div>
               <div class="video-info">¿Qué hace un Psicólogo?</div>
             </div>
-
-            <!-- Video 8 - YouTube -->
-            <div class="video-card" data-video="https://www.youtube.com/embed/TyMq_7hqN14?autoplay=1">
+            <div class="video-card" data-video="LmqScjXfTH8">
+              <img src="img_video/ingenieria.png" alt="Día de un Ingeniero">
+              <div class="overlay"></div>
+              <div class="play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"></path></svg></div>
+              <div class="video-info">Día de un Ingeniero</div>
+            </div>
+            <div class="video-card" data-video="TyMq_7hqN14">
+              <img src="img_video/medicina.png" alt="Así te enamorarás de Medicina">
+              <div class="overlay"></div>
+              <div class="play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"></path></svg></div>
+              <div class="video-info">Así te enamorarás de Medicina</div>
+            </div>
+            <div class="video-card" data-video="TyMq_7hqN14">
+              <img src="img_video/diseñador.png" alt="¿Quieres ser Diseñador?">
+              <div class="overlay"></div>
+              <div class="play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"></path></svg></div>
+              <div class="video-info">¿Quieres ser Diseñador?</div>
+            </div>
+            <div class="video-card" data-video="TyMq_7hqN14">
               <img src="img_video/abogado.png" alt="Quieres ser abogado">
               <div class="overlay"></div>
-              <div class="play">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-                  <path d="M8 5v14l11-7z"></path>
-                </svg>
-              </div>
+              <div class="play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"></path></svg></div>
+              <div class="video-info">Quieres ser abogado</div>
+            </div>
+            <div class="video-card" data-video="TyMq_7hqN14">
+              <img src="img_video/abogado.png" alt="Quieres ser abogado">
+              <div class="overlay"></div>
+              <div class="play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"></path></svg></div>
+              <div class="video-info">Quieres ser abogado</div>
+            </div>
+            <div class="video-card" data-video="qeqn1d9rplk">
+              <img src="img_video/Psychology.png" alt="¿Qué hace un Psicólogo?">
+              <div class="overlay"></div>
+              <div class="play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"></path></svg></div>
+              <div class="video-info">¿Qué hace un Psicólogo?</div>
+            </div>
+            <div class="video-card" data-video="TyMq_7hqN14">
+              <img src="img_video/abogado.png" alt="Quieres ser abogado">
+              <div class="overlay"></div>
+              <div class="play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"></path></svg></div>
               <div class="video-info">Quieres ser abogado</div>
             </div>
           </div>
@@ -396,9 +279,7 @@ require 'video.php';
         </div>
       </div>
 
-      <!-- ============================================= -->
-      <!-- REPRODUCTOR FLOTANTE (aparece al hacer clic)  -->
-      <!-- ============================================= -->
+      <!-- REPRODUCTOR FLOTANTE DE VIDEOS -->
       <div id="videoModal" class="video-modal">
         <div class="video-modal-content">
           <div class="video-modal-header">
@@ -411,69 +292,34 @@ require 'video.php';
         </div>
       </div>
     </section>
+
     <section>corfedito</section>
 
     <!-- ========================================= -->
-    <!-- COMUNIDAD (No estás solo) -->
+    <!-- COMUNIDAD -->
     <!-- ========================================= -->
     <section class="community-section">
-      <!-- Columna izquierda -->
       <div class="community-content">
         <h3>No estás solo en este camino</h3>
         <p>Únete a nuestra comunidad y comparte tus dudas</p>
-
-        <!-- <button class="btn primary">
-          <i class="fas fa-users"></i>
-          Unirme a la comunidad
-        </button> -->
       </div>
-
-      <!-- Columna centro -->
       <div class="stats-section">
-
-        <div class="stat-item">
-          <i class="fas fa-user-graduate"></i>
-          <span class="stat-number">15.000+</span>
-          <span class="stat-label">Estudiantes</span>
-        </div>
-
-        <div class="stat-item">
-          <i class="fas fa-graduation-cap"></i>
-          <span class="stat-number">500+</span>
-          <span class="stat-label">Carreras</span>
-        </div>
-
-        <div class="stat-item">
-          <i class="fas fa-chalkboard-teacher"></i>
-          <span class="stat-number">120+</span>
-          <span class="stat-label">Conferencias</span>
-        </div>
-
-        <div class="stat-item">
-          <i class="fas fa-map-marker-alt"></i>
-          <span class="stat-number">25</span>
-          <span class="stat-label">Ciudades</span>
-        </div>
-
+        <div class="stat-item"><i class="fas fa-user-graduate"></i><span class="stat-number">15.000+</span><span class="stat-label">Estudiantes</span></div>
+        <div class="stat-item"><i class="fas fa-graduation-cap"></i><span class="stat-number">500+</span><span class="stat-label">Carreras</span></div>
+        <div class="stat-item"><i class="fas fa-chalkboard-teacher"></i><span class="stat-number">120+</span><span class="stat-label">Conferencias</span></div>
+        <div class="stat-item"><i class="fas fa-map-marker-alt"></i><span class="stat-number">25</span><span class="stat-label">Ciudades</span></div>
       </div>
-
-      <!-- Columna derecha -->
       <div class="cta-section">
         <i class="fas fa-calendar-alt"></i>
-
-        <div>
-          <h3>Agenda tu orientación</h3>
-          <p>Con un profesional</p>
-        </div>
+        <div><h3>Agenda tu orientación</h3><p>Con un profesional</p></div>
         <i class="fas fa-arrow-right"></i>
       </div>
     </section>
+
     <!-- ========================================= -->
-    <!-- FOOTER (4 columnas) -->
+    <!-- FOOTER -->
     <!-- ========================================= -->
     <footer class="footer">
-
-      <!-- Columna 2: Bogotá - Modelia -->
       <div class="footer-col">
         <h5>Bogotá - Modelia</h5>
         <ul>
@@ -483,8 +329,6 @@ require 'video.php';
           <li>✉️ info@corfedes.co</li>
         </ul>
       </div>
-
-      <!-- Columna 3: Bogotá - Fontibón -->
       <div class="footer-col">
         <h5>Bogotá - Fontibón</h5>
         <ul>
@@ -493,8 +337,6 @@ require 'video.php';
           <li>✉️ csu-fontibon@areandina.edu.co</li>
         </ul>
       </div>
-
-      <!-- Columna 4: Manizales -->
       <div class="footer-col">
         <h5>Manizales</h5>
         <ul>
@@ -504,8 +346,6 @@ require 'video.php';
           <li>✉️ csu-manizales@corfedes.co</li>
         </ul>
       </div>
-
-      <!-- Columna 5: Zipaquirá -->
       <div class="footer-col">
         <h5>Zipaquirá</h5>
         <ul>
@@ -514,8 +354,6 @@ require 'video.php';
           <li>✉️ csu-zipaquira@areandina.edu.co</li>
         </ul>
       </div>
-
-      <!-- Columna 6: Armenia -->
       <div class="footer-col">
         <h5>Armenia</h5>
         <ul>
@@ -526,8 +364,66 @@ require 'video.php';
       </div>
     </footer>
 
+    <!-- ========================================= -->
+    <!-- MODAL DE INFORMACIÓN DE CARRERAS          -->
+    <!-- ========================================= -->
+    <div id="careerModal" class="career-modal">
+      <div class="career-modal-content">
+        <div class="career-modal-header">
+          <div>
+            <span id="careerModalIcon" class="career-modal-icon">🎓</span>
+            <h2 id="careerModalTitle">Medicina</h2>
+          </div>
+          <button class="career-modal-close" onclick="closeCareerModal()">✕</button>
+        </div>
+        <div class="career-modal-body">
+          <div class="career-modal-grid">
+            <div class="career-modal-info">
+              <h4>📋 Descripción</h4>
+              <p id="careerModalDesc">Descripción de la carrera...</p>
+            </div>
+            <div class="career-modal-info">
+              <h4>🎯 Área de conocimiento</h4>
+              <p id="careerModalArea">Ciencias de la Salud</p>
+            </div>
+            <div class="career-modal-info">
+              <h4>📚 Duración</h4>
+              <p id="careerModalDuration">5 años</p>
+            </div>
+            <div class="career-modal-info">
+              <h4>💼 Salidas laborales</h4>
+              <ul id="careerModalJobs">
+                <li>Hospitales</li>
+                <li>Clínicas privadas</li>
+                <li>Investigación</li>
+              </ul>
+            </div>
+            <div class="career-modal-info full-width">
+              <h4>📌 ¿Por qué estudiar esta carrera?</h4>
+              <p id="careerModalWhy">Razones para estudiar esta carrera...</p>
+            </div>
+            <div class="career-modal-info full-width">
+              <h4>🏛️ Universidades donde estudiarla</h4>
+              <ul id="careerModalUniversities">
+                <li>Universidad Nacional</li>
+                <li>Universidad de Los Andes</li>
+                <li>Universidad Javeriana</li>
+              </ul>
+            </div>
+          </div>
+          <div class="career-modal-actions">
+            <button class="btn primary" onclick="closeCareerModal()">
+              <i class="fas fa-graduation-cap"></i> Explorar más carreras
+            </button>
+            <button class="btn secondary" onclick="closeCareerModal()">
+              <i class="fas fa-times"></i> Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  </div>
+  </div> <!-- Cierre de app-wrapper -->
 
   <!-- ========================================= -->
   <!-- SCRIPTS -->
@@ -539,5 +435,4 @@ require 'video.php';
   <script src="/test.js"></script>
 
 </body>
-
 </html>

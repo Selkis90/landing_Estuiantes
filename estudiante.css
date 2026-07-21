@@ -1440,8 +1440,12 @@ body {
 }
 
 @keyframes fadeInModal {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* Contenedor del modal */
@@ -1457,13 +1461,13 @@ body {
 }
 
 @keyframes slideUpModal {
-  0% { 
-    transform: translateY(30px) scale(0.95); 
-    opacity: 0; 
+  0% {
+    transform: translateY(30px) scale(0.95);
+    opacity: 0;
   }
-  100% { 
-    transform: translateY(0) scale(1); 
-    opacity: 1; 
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
   }
 }
 
@@ -1526,16 +1530,255 @@ body {
     width: 95%;
     border-radius: 12px;
   }
-  
+
   .video-modal-header {
     padding: 10px 16px;
   }
-  
+
   .video-modal-title {
     font-size: 13px;
   }
-  
+
   .video-modal-close {
     font-size: 18px;
+  }
+}
+/* =============================================
+   MODAL DE INFORMACIÓN DE CARRERAS
+   ============================================= */
+
+.career-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 10000;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.career-modal-content {
+  background: linear-gradient(145deg, #0a1e3a, #06142e);
+  border-radius: 24px;
+  max-width: 700px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  animation: slideUpModal 0.4s ease;
+}
+
+/* Scroll personalizado */
+.career-modal-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.career-modal-content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.career-modal-content::-webkit-scrollbar-thumb {
+  background: #d01818;
+  border-radius: 10px;
+}
+
+/* Header */
+.career-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 28px;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+}
+
+.career-modal-header > div {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.career-modal-icon {
+  font-size: 32px;
+}
+
+.career-modal-header h2 {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0;
+  background: linear-gradient(90deg, #ffffff, #b0c4de);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.career-modal-close {
+  background: rgba(255, 255, 255, 0.06);
+  border: none;
+  color: #8899bb;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 6px 14px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.career-modal-close:hover {
+  background: rgba(208, 24, 24, 0.2);
+  color: #ffffff;
+  transform: rotate(90deg);
+}
+
+/* Body */
+.career-modal-body {
+  padding: 28px;
+}
+
+.career-modal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.career-modal-info {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 14px;
+  padding: 18px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  transition: all 0.3s ease;
+}
+
+.career-modal-info:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.career-modal-info.full-width {
+  grid-column: 1 / -1;
+}
+
+.career-modal-info h4 {
+  color: #8899bb;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.career-modal-info p {
+  color: #c8d3e0;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.career-modal-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.career-modal-info ul li {
+  color: #c8d3e0;
+  font-size: 14px;
+  padding: 4px 0;
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.career-modal-info ul li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #d01818;
+  font-weight: bold;
+}
+
+/* Acciones del modal */
+.career-modal-actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  flex-wrap: wrap;
+}
+
+.career-modal-actions .btn {
+  flex: 1;
+  min-width: 140px;
+  justify-content: center;
+}
+
+.career-modal-actions .btn.secondary {
+  background: rgba(255, 255, 255, 0.06);
+  color: #8899bb;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.career-modal-actions .btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+/* Animaciones */
+@keyframes fadeInModal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUpModal {
+  0% {
+    transform: translateY(30px) scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .career-modal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .career-modal-header {
+    padding: 18px 20px;
+  }
+
+  .career-modal-header h2 {
+    font-size: 20px;
+  }
+
+  .career-modal-body {
+    padding: 20px;
+  }
+
+  .career-modal-actions {
+    flex-direction: column;
+  }
+
+  .career-modal-actions .btn {
+    flex: none;
+    width: 100%;
   }
 }
