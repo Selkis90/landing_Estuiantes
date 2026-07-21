@@ -415,45 +415,59 @@ require 'video.php';
     <!-- FOOTER (4 columnas) -->
     <!-- ========================================= -->
     <footer class="footer">
-      <div class="footer-brand">
-        <h4>CORFEDES COV</h4>
-        <p>Servicio profesional de orientación vocacional para estudiantes.</p>
-      </div>
+
+      <!-- Columna 2: Bogotá - Modelia -->
       <div class="footer-col">
-        <h5>Estudiantes</h5>
+        <h5>Bogotá - Modelia</h5>
         <ul>
-          <li><a href="#">Test Vocacional</a></li>
-          <li><a href="#">Carreras</a></li>
-          <li><a href="#">Recomendaciones</a></li>
-          <li><a href="#">Videos</a></li>
+          <li>📍 Calle 23 # 81C - 33</li>
+          <li>📞 (1) 300 1545 - (1) 300 1546</li>
+          <li>📱 321 377 0334 - 311 598 0435</li>
+          <li>✉️ info@corfedes.co</li>
         </ul>
       </div>
+
+      <!-- Columna 3: Bogotá - Fontibón -->
       <div class="footer-col">
-        <h5>Alandantes</h5>
+        <h5>Bogotá - Fontibón</h5>
         <ul>
-          <li><a href="#">Guía para padres</a></li>
-          <li><a href="#">Como apoyar a los estudiantes</a></li>
+          <li>📍 Cra.100 No 20 - 59</li>
+          <li>📱 314 5280963</li>
+          <li>✉️ csu-fontibon@areandina.edu.co</li>
         </ul>
       </div>
+
+      <!-- Columna 4: Manizales -->
       <div class="footer-col">
-        <h5>Orientadores</h5>
+        <h5>Manizales</h5>
         <ul>
-          <li><a href="#">Hermenistas</a></li>
-          <li><a href="#">Conferencias</a></li>
-          <li><a href="#">Materiales</a></li>
+          <li>📍 Cra. 23 No. 70-69</li>
+          <li>📞 (6) 891 1224</li>
+          <li>📱 310 287 3606</li>
+          <li>✉️ csu-manizales@corfedes.co</li>
         </ul>
       </div>
+
+      <!-- Columna 5: Zipaquirá -->
       <div class="footer-col">
-        <h5>Contacto</h5>
+        <h5>Zipaquirá</h5>
         <ul>
-          <li><a href="#">Escríbenos</a></li>
-          <li><a href="#">Ayuda</a></li>
-          <li><a href="#">Preguntas frecuentes</a></li>
-          <li><a href="#">Políticas</a></li>
+          <li>📍 Calle 7a # 10-34</li>
+          <li>📱 322 7376795</li>
+          <li>✉️ csu-zipaquira@areandina.edu.co</li>
+        </ul>
+      </div>
+
+      <!-- Columna 6: Armenia -->
+      <div class="footer-col">
+        <h5>Armenia</h5>
+        <ul>
+          <li>📍 Kra 14 # 4-15 Av. Bolívar</li>
+          <li>📱 321 9213858</li>
+          <li>✉️ csu-armenia@areandina.edu.co</li>
         </ul>
       </div>
     </footer>
-
 
 
   </div>
