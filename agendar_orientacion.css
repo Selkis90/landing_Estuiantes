@@ -384,3 +384,271 @@ body {
         padding: 14px;
     }
 }
+
+/* =============================================
+   ESTILOS PARA MODAL DE AGENDAMIENTO
+   ============================================= */
+
+/* Reset de estilos para el modal */
+#agendarModal .career-modal-body {
+    padding: 20px 24px;
+}
+
+/* Formulario dentro del modal */
+#formAgendar .form-group {
+    margin-bottom: 18px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 14px;
+    padding: 16px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+#formAgendar .form-group h4 {
+    color: #8899bb;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+#formAgendar .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+#formAgendar .form-col {
+    width: 100%;
+}
+
+/* Inputs y selects */
+#formAgendar input[type="text"],
+#formAgendar input[type="email"],
+#formAgendar input[type="tel"],
+#formAgendar select,
+#formAgendar textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+#formAgendar input:focus,
+#formAgendar select:focus,
+#formAgendar textarea:focus {
+    outline: none;
+    border-color: #d01818;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 20px rgba(208, 24, 24, 0.1);
+}
+
+#formAgendar select option {
+    background: #0a1e3a;
+    color: #ffffff;
+}
+
+#formAgendar textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* =============================================
+   CALENDARIO PARA EL MODAL
+   ============================================= */
+#formAgendar .calendar-container {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 12px;
+}
+
+#formAgendar .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+#formAgendar .calendar-header #currentMonth {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+#formAgendar .calendar-header button {
+    background: rgba(255, 255, 255, 0.08);
+    border: none;
+    color: #8899bb;
+    font-size: 20px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#formAgendar .calendar-header button:hover {
+    background: rgba(208, 24, 24, 0.2);
+    color: #ffffff;
+}
+
+#formAgendar .calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    margin-bottom: 8px;
+}
+
+#formAgendar .calendar-weekdays span {
+    text-align: center;
+    color: #8899bb;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 4px 0;
+}
+
+#formAgendar .calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+}
+
+#formAgendar .calendar-days div {
+    text-align: center;
+    padding: 8px 4px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #c8d3e0;
+    cursor: default;
+    transition: all 0.2s ease;
+}
+
+#formAgendar .calendar-days div.available {
+    cursor: pointer;
+    color: #ffffff;
+}
+
+#formAgendar .calendar-days div.available:hover {
+    background: rgba(208, 24, 24, 0.15);
+    transform: scale(1.05);
+}
+
+#formAgendar .calendar-days div.available:active {
+    transform: scale(0.95);
+}
+
+#formAgendar .calendar-days div.selected {
+    background: linear-gradient(135deg, #d01818, #a01010);
+    color: #ffffff;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(208, 24, 24, 0.35);
+}
+
+#formAgendar .calendar-days div.today {
+    border: 2px solid rgba(208, 24, 24, 0.4);
+    font-weight: 600;
+}
+
+#formAgendar .calendar-days div.disabled {
+    color: #3f5f7a;
+    cursor: not-allowed;
+    opacity: 0.4;
+}
+
+/* =============================================
+   INFORMACIÓN DE FECHA SELECCIONADA
+   ============================================= */
+#formAgendar .selected-info {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+#formAgendar .selected-info span:first-child {
+    color: #8899bb;
+    font-size: 13px;
+}
+
+#formAgendar .selected-info #fechaSeleccionada {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* =============================================
+   SELECTOR DE HORA
+   ============================================= */
+#formAgendar .hora-container {
+    margin-top: 4px;
+}
+
+#formAgendar .hora-container label {
+    display: block;
+    color: #8899bb;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+#formAgendar .hora-container select {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+#formAgendar .hora-container select:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+@media (max-width: 600px) {
+    #formAgendar .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    #formAgendar .calendar-days div {
+        padding: 6px 2px;
+        font-size: 12px;
+    }
+    
+    #formAgendar .calendar-container {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    #formAgendar .calendar-days {
+        gap: 2px;
+    }
+    
+    #formAgendar .calendar-days div {
+        padding: 4px 0;
+        font-size: 11px;
+        border-radius: 6px;
+    }
+    
+    #formAgendar .calendar-header button {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+}

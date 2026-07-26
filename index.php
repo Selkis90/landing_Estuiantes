@@ -11,6 +11,7 @@ require 'video.php';
   <link rel="stylesheet" href="estudiante.css?v=10" />
   <link rel="stylesheet" href="videos.css">
   <link rel="stylesheet" href="corfedito.css">
+  <link rel="stylesheet" href="/agendar_orientacion.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 </head>
@@ -343,20 +344,52 @@ require 'video.php';
     <section>corfedito</section>
 
     <!-- ========================================= -->
-    <!-- COMUNIDAD -->
-    <!-- ========================================= -->
-    <section class="community-section">
-      <div class="community-content">
-        <h3>No estás solo en este camino</h3>
-        <p>Únete a nuestra comunidad y comparte tus dudas</p>
+<!-- COMUNIDAD - CON BOTÓN DE AGENDAMIENTO -->
+<!-- ========================================= -->
+<section class="community-section">
+  <div class="community-content">
+    <h3>No estás solo en este camino</h3>
+    <p>Únete a nuestra comunidad y comparte tus dudas</p>
+  </div>
+  
+  <!-- STATS -->
+  <div class="stats-section">
+    <div class="stat-item">
+      <i class="fas fa-user-graduate"></i>
+      <span class="stat-number">15.000+</span>
+      <span class="stat-label">Estudiantes</span>
+    </div>
+    <div class="stat-item">
+      <i class="fas fa-graduation-cap"></i>
+      <span class="stat-number">500+</span>
+      <span class="stat-label">Carreras</span>
+    </div>
+    <div class="stat-item">
+      <i class="fas fa-chalkboard-teacher"></i>
+      <span class="stat-number">120+</span>
+      <span class="stat-label">Conferencias</span>
+    </div>
+    <div class="stat-item">
+      <i class="fas fa-map-marker-alt"></i>
+      <span class="stat-number">4+</span>
+      <span class="stat-label">Ciudades</span>
+    </div>
+  </div>
+
+  <!-- CTA - Agenda tu orientación -->
+  <div class="community-cta">
+    <div class="cta-content">
+      <span class="cta-icon">📌</span>
+      <div class="cta-text">
+        <h4>Agenda tu orientación</h4>
+        <span>Con un profesional</span>
       </div>
-      <div class="stats-section">
-        <div class="stat-item"><i class="fas fa-user-graduate"></i><span class="stat-number">15.000+</span><span class="stat-label">Estudiantes</span></div>
-        <div class="stat-item"><i class="fas fa-graduation-cap"></i><span class="stat-number">500+</span><span class="stat-label">Carreras</span></div>
-        <div class="stat-item"><i class="fas fa-chalkboard-teacher"></i><span class="stat-number">120+</span><span class="stat-label">Conferencias</span></div>
-        <div class="stat-item"><i class="fas fa-map-marker-alt"></i><span class="stat-number">25</span><span class="stat-label">Ciudades</span></div>
-      </div>
-    </section>
+    </div>
+    <button class="btn-agendar" onclick="openAgendarModal()">
+      <i class="fas fa-calendar-check"></i> Agendar cita
+    </button>
+  </div>
+</section>
 
     <!-- ========================================= -->
     <!-- MODAL DE INFORMACIÓN DE CARRERAS          -->
@@ -418,50 +451,98 @@ require 'video.php';
     </div>
 
     <!-- ========================================= -->
-    <!-- MODAL PARA AGENDAR ORIENTACIÓN            -->
+    <!-- MODAL PARA AGENDAR ORIENTACIÓN (VERSIÓN CORRECTA) -->
     <!-- ========================================= -->
     <div id="agendarModal" class="career-modal">
-      <div class="career-modal-content" style="max-width: 500px;">
+      <div class="career-modal-content" style="max-width: 600px;">
         <div class="career-modal-header">
           <div>
             <span class="career-modal-icon">📅</span>
-            <h2 id="agendarModalTitle">Agenda tu orientación</h2>
+            <h2>Agenda tu orientación vocacional</h2>
           </div>
           <button class="career-modal-close" onclick="closeAgendarModal()">✕</button>
         </div>
         <div class="career-modal-body">
-          <form id="formAgendar" onsubmit="enviarAgendamiento(event)">
-            <div class="career-modal-info full-width" style="margin-bottom: 16px;">
-              <h4>👤 Tus datos</h4>
-              <input type="text" id="nombreAgendar" placeholder="Tu nombre completo" required style="width:100%; padding:12px 16px; border-radius:10px; border:1px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.05); color:#fff; font-size:14px; margin-top:8px;">
-              <input type="email" id="emailAgendar" placeholder="Tu correo electrónico" required style="width:100%; padding:12px 16px; border-radius:10px; border:1px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.05); color:#fff; font-size:14px; margin-top:8px;">
-              <input type="tel" id="telefonoAgendar" placeholder="Tu número de teléfono" required style="width:100%; padding:12px 16px; border-radius:10px; border:1px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.05); color:#fff; font-size:14px; margin-top:8px;">
+          <form id="formAgendar" action="agendar_orientacion.php" method="POST">
+            <!-- Información personal -->
+            <div class="form-group">
+              <h4>👤 Datos personales</h4>
+              <div class="form-row">
+                <div class="form-col">
+                  <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+                </div>
+                <div class="form-col">
+                  <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-col">
+                  <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
+                </div>
+                <div class="form-col">
+                  <input type="text" id="identificacion" name="identificacion" placeholder="Cédula (opcional)">
+                </div>
+              </div>
             </div>
 
-            <div class="career-modal-info full-width" style="margin-bottom: 16px;">
-              <h4>📋 ¿Qué necesitas?</h4>
-              <select id="tipoOrientacion" required style="width:100%; padding:12px 16px; border-radius:10px; border:1px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.05); color:#fff; font-size:14px; margin-top:8px;">
-                <option value="" style="background:#0a1e3a;">Selecciona una opción</option>
-                <option value="test" style="background:#0a1e3a;">📝 Orientación vocacional</option>
-                <option value="carrera" style="background:#0a1e3a;">🎓 Información de carrera</option>
-                <option value="universidad" style="background:#0a1e3a;">🏛️ Universidades</option>
-                <option value="general" style="background:#0a1e3a;">💬 Consulta general</option>
+            <!-- Selección de profesional -->
+            <div class="form-group">
+              <h4>👨‍🏫 Profesional</h4>
+              <select id="profesional" name="profesional" required>
+                <option value="">Selecciona un profesional</option>
+                <option value="Dra. María Rodríguez">Dra. María Rodríguez - Orientadora Vocacional</option>
+                <option value="Dr. Carlos Pérez">Dr. Carlos Pérez - Psicólogo Educativo</option>
+                <option value="Dra. Ana Martínez">Dra. Ana Martínez - Asesora Académica</option>
+                <option value="Dr. Luis Gómez">Dr. Luis Gómez - Coach de Carrera</option>
               </select>
             </div>
 
-            <div class="career-modal-info full-width" style="margin-bottom: 16px;">
-              <h4>📅 Fecha y hora</h4>
-              <input type="date" id="fechaAgendar" required style="width:100%; padding:12px 16px; border-radius:10px; border:1px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.05); color:#fff; font-size:14px; margin-top:8px;">
-              <input type="time" id="horaAgendar" required style="width:100%; padding:12px 16px; border-radius:10px; border:1px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.05); color:#fff; font-size:14px; margin-top:8px;">
+            <!-- Calendario y horarios -->
+            <div class="form-group">
+              <h4>📅 Selecciona fecha y hora</h4>
+              <div class="calendar-container">
+                <div class="calendar-header">
+                  <button type="button" id="prevMonth">‹</button>
+                  <span id="currentMonth">Enero 2026</span>
+                  <button type="button" id="nextMonth">›</button>
+                </div>
+                <div class="calendar-weekdays">
+                  <span>Lun</span>
+                  <span>Mar</span>
+                  <span>Mié</span>
+                  <span>Jue</span>
+                  <span>Vie</span>
+                  <span>Sáb</span>
+                  <span>Dom</span>
+                </div>
+                <div class="calendar-days" id="calendarDays">
+                  <!-- Días generados por JavaScript -->
+                </div>
+              </div>
+
+              <div class="selected-info">
+                <span>📌 Fecha seleccionada: </span>
+                <span id="fechaSeleccionada">Ninguna</span>
+                <input type="hidden" id="fecha" name="fecha" required>
+              </div>
+
+              <div class="hora-container">
+                <label for="hora">🕐 Hora disponible:</label>
+                <select id="hora" name="hora" required disabled>
+                  <option value="">Primero selecciona una fecha y profesional</option>
+                </select>
+              </div>
             </div>
 
-            <div class="career-modal-info full-width" style="margin-bottom: 16px;">
+            <!-- Mensaje adicional -->
+            <div class="form-group">
               <h4>📝 Mensaje adicional</h4>
-              <textarea id="mensajeAgendar" rows="3" placeholder="Cuéntanos más sobre lo que necesitas..." style="width:100%; padding:12px 16px; border-radius:10px; border:1px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.05); color:#fff; font-size:14px; margin-top:8px; resize:vertical; font-family:inherit;"></textarea>
+              <textarea id="mensaje" name="mensaje" rows="3" placeholder="Cuéntanos más sobre lo que necesitas..."></textarea>
             </div>
 
-            <div class="career-modal-actions" style="margin-top:0;">
-              <button type="submit" class="btn primary" style="flex:1; background: linear-gradient(135deg, #d01818, #a01010); box-shadow: 0 8px 25px rgba(208,24,24,0.35);">
+            <!-- Botones -->
+            <div class="career-modal-actions" style="margin-top:20px;">
+              <button type="submit" class="btn primary" style="flex:1; background: linear-gradient(135deg, #d01818, #a01010);">
                 <i class="fas fa-paper-plane"></i> Enviar solicitud
               </button>
               <button type="button" class="btn secondary" onclick="closeAgendarModal()" style="flex:0.5;">
@@ -528,16 +609,15 @@ require 'video.php';
     </footer>
 
   </div> <!-- Cierre de app-wrapper -->
-
   <!-- ========================================= -->
   <!-- SCRIPTS -->
   <!-- ========================================= -->
   <script src="estudiante.js"></script>
+  <script src="agendar_orientacion.js"></script> <!-- PRIMERO ESTE -->
   <script src="corfedito.js"></script>
+  <script src="videos.js"></script>
+  <script src="test.js"></script>
   <?php include 'estudiante-backend.php'; ?>
-  <script src="/videos.js"></script>
-  <script src="/test.js"></script>
-  <script src="/modales.js"></script> <!-- NUEVO ARCHIVO JS PARA LOS MODALES -->
 
 </body>
 

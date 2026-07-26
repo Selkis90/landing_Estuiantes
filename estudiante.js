@@ -309,3 +309,57 @@ document.addEventListener("keydown", function (e) {
     closeCareerModal();
   }
 });
+
+// ============================================
+// FUNCIONES PARA EL MODAL DE AGENDAMIENTO
+// ============================================
+
+function openAgendarModal() {
+  const modal = document.getElementById("agendarModal");
+  if (modal) {
+    modal.style.display = "flex";
+    document.body.style.overflow = "hidden";
+
+    // Resetear formulario
+    const form = document.getElementById("formAgendar");
+    if (form) form.reset();
+
+    // Resetear selección de fecha
+    const fechaSpan = document.getElementById("fechaSeleccionada");
+    if (fechaSpan) fechaSpan.textContent = "Ninguna";
+
+    const fechaInput = document.getElementById("fecha");
+    if (fechaInput) fechaInput.value = "";
+
+    // Reinicializar el calendario (si existe la función)
+    if (typeof renderCalendar === "function") {
+      const currentDate = new Date();
+      renderCalendar(currentDate.getFullYear(), currentDate.getMonth());
+    }
+  }
+}
+
+function closeAgendarModal() {
+  const modal = document.getElementById("agendarModal");
+  if (modal) {
+    modal.style.display = "none";
+    document.body.style.overflow = "auto";
+  }
+}
+
+// Cerrar con ESC
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    closeCareerModal();
+    closeAgendarModal();
+    closeVideo();
+  }
+});
+
+// Cerrar con clic fuera
+document.addEventListener("click", function (e) {
+  const agendarModal = document.getElementById("agendarModal");
+  if (e.target === agendarModal) {
+    closeAgendarModal();
+  }
+});

@@ -1,65 +1,94 @@
-const robot = document.getElementById("robot");
-const mensaje = document.getElementById("mensaje");
+// =============================================
+// CORFEDITO - INTERACCIONES
+// =============================================
 
-const frases=[
-
-"Hola Humano",
-
-"¿Cómo estás?",
-
-"Estoy aprendiendo.",
-
-"Soy tu asistente.",
-
-"¡Qué tengas un gran día!",
-
-"¿Necesitas ayuda?",
-
-"Estoy listo."
-
-];
-
-robot.addEventListener("click",function(){
-
-let numero=Math.floor(Math.random()*frases.length);
-
-mensaje.innerHTML=frases[numero];
-
-robot.style.transform="rotate(10deg)";
-
-setTimeout(function(){
-
-robot.style.transform="rotate(-10deg)";
-
-},150);
-
-setTimeout(function(){
-
-robot.style.transform="rotate(0deg)";
-
-},300);
-
-hablar(frases[numero]);
-
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('✅ CORFEDITO · Módulo cargado');
+    
+    // =============================================
+    // BOTONES DE CORFEDITO
+    // =============================================
+    
+    // Buscar el botón "Solicita información" en la sección corfedito
+    const btnSolicitar = document.querySelector('.corfedito-cta .btn');
+    if (btnSolicitar) {
+        btnSolicitar.addEventListener('click', function(e) {
+            e.preventDefault();
+            console.log('📅 Abriendo modal desde CORFEDITO');
+            
+            // Llamar a la función global para abrir el modal
+            if (typeof openAgendarModal === 'function') {
+                openAgendarModal();
+            } else {
+                console.warn('⚠️ openAgendarModal no está definida');
+                alert('📅 Por favor, selecciona "Agendar orientación" desde el menú.');
+            }
+        });
+    } else {
+        console.log('ℹ️ Botón "Solicita información" no encontrado en CORFEDITO');
+    }
+    
+    // =============================================
+    // TARJETAS DE CORFEDITO (efectos visuales)
+    // =============================================
+    
+    const cards = document.querySelectorAll('.corfedito-card');
+    cards.forEach((card, index) => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-6px)';
+            this.style.transition = 'all 0.3s ease';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+        
+        // Click en tarjetas para más información
+        card.addEventListener('click', function() {
+            const titulo = this.querySelector('h4')?.textContent || 'opción';
+            console.log(`ℹ️ Información de: ${titulo}`);
+            // Aquí puedes agregar un modal o redirección
+        });
+    });
+    
+    console.log(`✅ ${cards.length} tarjetas de CORFEDITO inicializadas`);
 });
 
-function hablar(texto){
+// =============================================
+// FUNCIONES GLOBALES DE CORFEDITO
+// =============================================
 
-const voz=new SpeechSynthesisUtterance(texto);
-
-voz.lang="es-ES";
-
-speechSynthesis.speak(voz);
-
+// Función para abrir el modal de agendamiento desde CORFEDITO
+function abrirAgendamientoCorfedito() {
+    console.log('📅 Abriendo agendamiento desde CORFEDITO');
+    if (typeof openAgendarModal === 'function') {
+        openAgendarModal();
+    } else {
+        alert('📅 Por favor, agenda tu orientación desde el botón "Agendar orientación"');
+    }
 }
 
-document.addEventListener("mousemove",(e)=>{
+// Función para mostrar información de un beneficio
+function mostrarBeneficio(tipo) {
+    const beneficios = {
+        'credito': {
+            titulo: 'Crédito Educativo',
+            descripcion: 'Financia hasta el 100% de tu matrícula con tasas preferenciales para estudiantes Corfedes.'
+        },
+        'beca': {
+            titulo: 'Becas y Descuentos',
+            descripcion: 'Accede a becas por excelencia académica y descuentos especiales para estudiantes destacados.'
+        },
+        'alianza': {
+            titulo: 'Alianzas Estratégicas',
+            descripcion: 'Convenios con las mejores instituciones financieras del país para tu beneficio.'
+        }
+    };
+    
+    const info = beneficios[tipo];
+    if (info) {
+        alert(`📌 ${info.titulo}\n\n${info.descripcion}`);
+    }
+}
 
-let x=(window.innerWidth/2-e.clientX)/40;
-
-let y=(window.innerHeight/2-e.clientY)/40;
-
-robot.style.transform=`translate(${-x}px,${-y}px)`;
-
-});
-
+console.log('✅ CORFEDITO · Funciones globales cargadas');
