@@ -118,25 +118,25 @@ require 'video.php';
           <a href="#" class="link-all">Ver todas <i class="fas fa-arrow-right"></i></a>
         </div>
         <div class="careers-match-grid">
-          <div class="career-match-card">
+          <div class="career-match-card" onclick="openCareerModal('medicina')">
             <img src="/img/medicina.png" alt="Medicina" class="img_explora">
             <div class="career-title">Medicina</div>
             <div class="career-area">Ciencias de la Salud</div>
             <span class="career-match">56% Match</span>
           </div>
-          <div class="career-match-card">
+          <div class="career-match-card" onclick="openCareerModal('sistemas')">
             <img src="/img/sistemas.png" alt="sistemas" class="img_explora">
             <div class="career-title">Ing. de Sistemas</div>
             <div class="career-area">Tecnología</div>
             <span class="career-match">92% Match</span>
           </div>
-          <div class="career-match-card">
+          <div class="career-match-card" onclick="openCareerModal('comunicacion')">
             <img src="/img/comunicacion.png" alt="comunicacion" class="img_explora">
             <div class="career-title">Comunicación</div>
             <div class="career-area">Social y Humanas</div>
             <span class="career-match">50% Match</span>
           </div>
-          <div class="career-match-card">
+          <div class="career-match-card" onclick="openCareerModal('arquitectura')">
             <img src="/img/arquitecto.png" alt="arquitecto" class="img_explora">
             <div class="career-title">Arquitectura</div>
             <div class="career-area">Diseño y Construcción</div>
@@ -356,60 +356,7 @@ require 'video.php';
         <div class="stat-item"><i class="fas fa-chalkboard-teacher"></i><span class="stat-number">120+</span><span class="stat-label">Conferencias</span></div>
         <div class="stat-item"><i class="fas fa-map-marker-alt"></i><span class="stat-number">25</span><span class="stat-label">Ciudades</span></div>
       </div>
-      <div class="cta-section">
-        <i class="fas fa-calendar-alt"></i>
-        <div><h3>Agenda tu orientación</h3><p>Con un profesional</p></div>
-        <i class="fas fa-arrow-right"></i>
-      </div>
     </section>
-
-    <!-- ========================================= -->
-    <!-- FOOTER -->
-    <!-- ========================================= -->
-    <footer class="footer">
-      <div class="footer-col">
-        <h5>Bogotá - Modelia</h5>
-        <ul>
-          <li>📍 Calle 23 # 81C - 33</li>
-          <li>📞 (1) 300 1545 - (1) 300 1546</li>
-          <li>📱 321 377 0334 - 311 598 0435</li>
-          <li>✉️ info@corfedes.co</li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Bogotá - Fontibón</h5>
-        <ul>
-          <li>📍 Cra.100 No 20 - 59</li>
-          <li>📱 314 5280963</li>
-          <li>✉️ csu-fontibon@areandina.edu.co</li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Manizales</h5>
-        <ul>
-          <li>📍 Cra. 23 No. 70-69</li>
-          <li>📞 (6) 891 1224</li>
-          <li>📱 310 287 3606</li>
-          <li>✉️ csu-manizales@corfedes.co</li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Zipaquirá</h5>
-        <ul>
-          <li>📍 Calle 7a # 10-34</li>
-          <li>📱 322 7376795</li>
-          <li>✉️ csu-zipaquira@areandina.edu.co</li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Armenia</h5>
-        <ul>
-          <li>📍 Kra 14 # 4-15 Av. Bolívar</li>
-          <li>📱 321 9213858</li>
-          <li>✉️ csu-armenia@areandina.edu.co</li>
-        </ul>
-      </div>
-    </footer>
 
     <!-- ========================================= -->
     <!-- MODAL DE INFORMACIÓN DE CARRERAS          -->
@@ -459,8 +406,8 @@ require 'video.php';
             </div>
           </div>
           <div class="career-modal-actions">
-            <button class="btn primary" onclick="closeCareerModal()">
-              <i class="fas fa-graduation-cap"></i> Explorar más carreras
+            <button class="btn primary" onclick="openAgendarModal()">
+              <i class="fas fa-calendar-plus"></i> Agendar orientación
             </button>
             <button class="btn secondary" onclick="closeCareerModal()">
               <i class="fas fa-times"></i> Cerrar
@@ -532,6 +479,54 @@ require 'video.php';
       </div>
     </div>
 
+    <!-- ========================================= -->
+    <!-- FOOTER -->
+    <!-- ========================================= -->
+    <footer class="footer">
+      <div class="footer-col">
+        <h5>Bogotá - Modelia</h5>
+        <ul>
+          <li>📍 Calle 23 # 81C - 33</li>
+          <li>📞 (1) 300 1545 - (1) 300 1546</li>
+          <li>📱 321 377 0334 - 311 598 0435</li>
+          <li>✉️ info@corfedes.co</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Bogotá - Fontibón</h5>
+        <ul>
+          <li>📍 Cra.100 No 20 - 59</li>
+          <li>📱 314 5280963</li>
+          <li>✉️ csu-fontibon@areandina.edu.co</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Manizales</h5>
+        <ul>
+          <li>📍 Cra. 23 No. 70-69</li>
+          <li>📞 (6) 891 1224</li>
+          <li>📱 310 287 3606</li>
+          <li>✉️ csu-manizales@corfedes.co</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Zipaquirá</h5>
+        <ul>
+          <li>📍 Calle 7a # 10-34</li>
+          <li>📱 322 7376795</li>
+          <li>✉️ csu-zipaquira@areandina.edu.co</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Armenia</h5>
+        <ul>
+          <li>📍 Kra 14 # 4-15 Av. Bolívar</li>
+          <li>📱 321 9213858</li>
+          <li>✉️ csu-armenia@areandina.edu.co</li>
+        </ul>
+      </div>
+    </footer>
+
   </div> <!-- Cierre de app-wrapper -->
 
   <!-- ========================================= -->
@@ -542,6 +537,8 @@ require 'video.php';
   <?php include 'estudiante-backend.php'; ?>
   <script src="/videos.js"></script>
   <script src="/test.js"></script>
+  <script src="/modales.js"></script> <!-- NUEVO ARCHIVO JS PARA LOS MODALES -->
 
 </body>
+
 </html>

@@ -1,0 +1,386 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    overflow: hidden;
+    padding: 30px;
+}
+
+.header {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 3px solid #667eea;
+    margin-bottom: 30px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.logo {
+    height: 60px;
+    width: auto;
+}
+
+.header h1 {
+    color: #2d3748;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.subtitle {
+    color: #4a5568;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.subtitle::before {
+    content: "✨ ";
+}
+.subtitle::after {
+    content: " ✨";
+}
+
+.mensaje {
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+}
+
+.mensaje.exito {
+    background: #c6f6d5;
+    color: #22543d;
+    border-left: 4px solid #38a169;
+}
+
+.mensaje.error {
+    background: #fed7d7;
+    color: #742a2a;
+    border-left: 4px solid #e53e3e;
+}
+
+.mensaje i {
+    font-size: 1.5rem;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.form-container {
+    width: 100%;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.form-group label i {
+    margin-right: 8px;
+    color: #667eea;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #f7fafc;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    background: white;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.calendar-section {
+    background: #f7fafc;
+    padding: 25px;
+    border-radius: 15px;
+    margin: 10px 0 20px 0;
+}
+
+.calendar-section h3 {
+    color: #2d3748;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.calendar-section h3 i {
+    color: #667eea;
+    margin-right: 10px;
+}
+
+.calendar-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.calendar-container {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-header button {
+    background: #667eea;
+    border: none;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.calendar-header button:hover {
+    background: #5a67d8;
+    transform: scale(1.05);
+}
+
+#currentMonth {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.calendar-days div {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.95rem;
+    font-weight: 500;
+    background: white;
+    border: 2px solid transparent;
+}
+
+.calendar-days div:hover:not(.disabled):not(.selected) {
+    background: #ebf4ff;
+    border-color: #667eea;
+}
+
+.calendar-days div.selected {
+    background: #667eea;
+    color: white;
+    border-color: #667eea;
+    transform: scale(1.05);
+}
+
+.calendar-days div.disabled {
+    color: #cbd5e0;
+    cursor: not-allowed;
+}
+
+.calendar-days div.available {
+    cursor: pointer;
+}
+
+.calendar-days div.today {
+    border-color: #48bb78;
+    font-weight: 700;
+}
+
+.time-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.time-selection .form-group {
+    margin-bottom: 0;
+}
+
+#hora {
+    width: 100%;
+}
+
+#hora option:disabled {
+    color: #a0aec0;
+}
+
+.selected-date-info {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.selected-date-info p {
+    color: #4a5568;
+    font-size: 1rem;
+}
+
+#fechaSeleccionada {
+    color: #2d3748;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.btn-agendar {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn-agendar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+}
+
+.btn-agendar:active {
+    transform: translateY(0);
+}
+
+.btn-agendar i {
+    font-size: 1.3rem;
+}
+
+.footer {
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 30px;
+    border-top: 2px solid #edf2f7;
+    color: #718096;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .calendar-wrapper {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .logo-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .logo {
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+        border-radius: 10px;
+    }
+    
+    .calendar-days div {
+        font-size: 0.8rem;
+    }
+    
+    .btn-agendar {
+        font-size: 1rem;
+        padding: 14px;
+    }
+}

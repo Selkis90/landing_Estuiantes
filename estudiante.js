@@ -236,10 +236,10 @@ const carrerasData = {
 function openCareerModal(careerTitle) {
   const data = carrerasData[careerTitle];
 
-  if (!data) {
-    alert("Información de la carrera no disponible aún.");
-    return;
-  }
+  // if (!data) {
+  //   alert("Información de la carrera no disponible aún.");
+  //   return;
+  // }
 
   document.getElementById("careerModalIcon").textContent = data.icon || "🎓";
   document.getElementById("careerModalTitle").textContent = careerTitle;
