@@ -54,7 +54,7 @@ require 'video.php';
       <p class="hero-sub">de forma fácil, divertida e inteligente.</p>
       <div class="hero-actions">
         <button class="btn primary" id="startTestBtn">
-          <i class="fas fa-rocket"></i> Comenzar mi test
+          <i class="fas fa-rocket"></i> <a target="_blank" href="https://wa.me/message/LKUTSMD6JLGSJ1" >Escribemos por whatsapp</a>
         </button>
         <button class="btn outline" id="exploreCareersBtn">
           <i class="fas fa-compass"></i> Explorar carreras

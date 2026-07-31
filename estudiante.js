@@ -20,13 +20,13 @@ document.addEventListener("DOMContentLoaded", function () {
       this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Cargando...';
       this.disabled = true;
       setTimeout(() => {
-        this.innerHTML = '<i class="fas fa-check"></i> ¡Test listo!';
+        this.innerHTML = '<i class="fas fa-check"></i> ¡Whatsapp listo!';
         this.style.background = "#1f8b4c";
         setTimeout(() => {
-          this.innerHTML = '<i class="fas fa-rocket"></i> Comenzar mi test';
+          this.innerHTML = '<i class="fas fa-rocket"></i> Escribemos por whatsapp';
           this.disabled = false;
           this.style.background = "";
-          alert("🚀 Test de orientación iniciado");
+          // alert("🚀 Test de orientación iniciado");
         }, 700);
       }, 1200);
     });
